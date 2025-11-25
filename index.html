@@ -70,6 +70,8 @@ th { background: #f0f0f0; font-weight: 600; }
     <a class="nav-link" href="#chuvas">Chuvas</a>
     <a class="nav-link" href="#cig">Broca & Cigarrinha (Em breve)</a>
     <a class="nav-link" href="#solo">Pragas de Solo (Em breve)</a>
+    <a class="nav-link" href="#perguntas">Perguntas Frequentes</a>
+    <a class="nav-link" href="#contatos">Contato</a>
 </div>
 
 <div class="content">
@@ -368,6 +370,135 @@ th { background: #f0f0f0; font-weight: 600; }
         <div id="det-data"><h3>data / ano / mes / semana / dia</h3><p>Data da medição no formato ISO 8601 (YYYY-MM-DD) e seus componentes extraídos para facilitar filtros e agrupamentos.</p></div>
         <div id="det-precipitacao"><h3>precipitacao</h3><p>Pluviometria total acumulada no dia (mm), com separador decimal ponto.</p></div>
         <div id="det-temp"><h3>temp_media / temp_min / temp_max</h3><p>Temperaturas registradas em graus Celsius (°C), com uma casa decimal.</p></div>
+    </div>
+</div>
+
+<div id="perguntas" class="section">
+    <h2>Perguntas Frequentes – API Tomografia do Canavial</h2>
+    <p style="line-height: 1.8; margin-bottom: 20px;">
+        Informações técnicas oficiais sobre a integração com o sistema 
+        <strong>Tomografia do Canavial</strong> da 
+        <strong>Sigma Geotecnologias Digitais</strong>.
+    </p>
+
+    <div style="display: grid; gap: 14px; margin: 25px 0; font-size: 0.95rem;">
+        <div style="padding: 14px; background: #f9f9f9; border-left: 4px solid var(--accent);">
+            <strong>Empresa responsável</strong><br>
+            Sigma Geotecnologias Digitais
+        </div>
+
+        <div style="padding: 14px; background: #f9f9f9; border-left: 4px solid var(--accent);">
+            <strong>URL de acesso</strong><br>
+            <code>https://integracaotomo.sigmageotecnologias.com.br</code>
+        </div>
+
+        <div style="padding: 14px; background: #f9f9f9; border-left: 4px solid var(--accent);">
+            <strong>IP do servidor</strong><br>
+            162.240.50.27
+        </div>
+
+        <div style="padding: 14px; background: #f9f9f9; border-left: 4px solid var(--accent);">
+            <strong>Porta e protocolo</strong><br>
+            Porta 443 – HTTPS
+        </div>
+
+        <div style="padding: 14px; background: #f9f9f9; border-left: 4px solid var(--accent);">
+            <strong>1. Qual o formato de dados utilizado pela API?</strong><br>
+            JSON
+        </div>
+
+        <div style="padding: 14px; background: #f9f9f9; border-left: 4px solid var(--accent);">
+            <strong>2. Qual o tipo da API?</strong><br>
+            RESTful
+        </div>
+
+        <div style="padding: 14px; background: #f9f9f9; border-left: 4px solid var(--accent);">
+            <strong>3. Qual o mecanismo de criptografia aplicado?</strong><br>
+            TLS 1.2 
+        </div>
+
+        <div style="padding: 14px; background: #f9f9f9; border-left: 4px solid var(--accent);">
+            <strong>4. Qual(is) métodos de autenticação estão disponíveis?</strong><br>
+            Autenticação via chave de API
+        </div>
+
+        <div style="padding: 14px; background: #f9f9f9; border-left: 4px solid var(--accent);">
+            <strong>5. Qual o tipo de política de autorização suportada?</strong><br>
+            RBAC – Role-Based Access Control
+        </div>
+
+        <div style="padding: 14px; background: #f9f9f9; border-left: 4px solid var(--accent);">
+            <strong>6. A API possui proteção contra ameaças comuns?</strong><br>
+            Sim – implementa proteções contra SQL Injection, XSS, CSRF, rate limiting e ataques de força bruta.
+        </div>
+    </div>
+
+    <div class="details-block">
+        <h3>Detalhamento dos Campos</h3>
+        <div id="det-tomo">
+            <h3>Tomografia do Canavial – API de integração</h3>
+            <p>Serviço RESTful da Sigma Geotecnologias Digitais que disponibiliza dados de tomografia elétrica do solo, mapas de condutividade elétrica aparente (CEa), profundidade efetiva do solo, zones de manejo e recomendações de manejo variável para canaviais.</p>
+        </div>
+    </div>
+</div>
+
+<div id="contatos" class="section">
+    <h2>Contatos – Suporte Técnico e Comercial</h2>
+    <p style="line-height: 1.8; margin-bottom: 25px;">
+        Em caso de dúvidas sobre a integração, documentação, testes ou qualquer necessidade técnica/comercial, 
+        entre em contato diretamente com a equipe responsável da Sigma Geotecnologias Digitais.
+    </p>
+
+    <div style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+        
+        <div style="background: #f9f9f9; padding: 22px; border-radius: 10px; border-left: 5px solid var(--accent); box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+            <h3 style="margin: 0 0 12px 0; color: var(--accent); font-size: 1.25rem;">
+                Justino Neto
+            </h3>
+            <p style="margin: 8px 0; font-size: 1rem; color: #333;">
+                <strong>Gerente de Projetos e Integrações</strong>
+            </p>
+            <p style="margin: 12px 0 8px 0;">
+                <strong>E-mail:</strong> 
+                <a href="mailto:justino.neto@sigmagis.com.br" style="color: #C98345; text-decoration: none;">
+                    justino.neto@sigmagis.com.br
+                </a>
+            </p>
+            <p style="margin: 8px 0;">
+                <strong>Telefone / WhatsApp:</strong> 
+                <a href="https://wa.me/5516999625930" target="_blank" style="color: #25D366; text-decoration: none; font-weight: 600;">
+                    (16) 99962-5930
+                </a>
+            </p>
+        </div>
+
+        <div style="background: #f9f9f9; padding: 22px; border-radius: 10px; border-left: 5px solid var(--accent); box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+            <h3 style="margin: 0 0 12px 0; color: var(--accent); font-size: 1.25rem;">
+                Victoria Vagner
+            </h3>
+            <p style="margin: 8px 0; font-size: 1rem; color: #333;">
+                <strong>Coordenadora de Geoprocessamento</strong>
+            </p>
+            <p style="margin: 12px 0 8px 0;">
+                <strong>E-mail:</strong> 
+                <a href="mailto:victoria.vagner@sigmagis.com.br" style="color: #C98345; text-decoration: none;">
+                    victoria.vagner@sigmagis.com.br
+                </a>
+            </p>
+            <p style="margin: 8px 0;">
+                <strong>Telefone / WhatsApp:</strong> 
+                <a href="https://wa.me/5516996098129" target="_blank" style="color: #25D366; text-decoration: none; font-weight: 600;">
+                    (16) 99609-8129
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div style="margin-top: 30px; padding: 18px; background: #f0f8ff; border-radius: 8px; border-left: 4px solid #4a90e2;">
+        <p style="margin: 0; font-size: 0.95rem; color: #1a5fb4;">
+            <strong>Dica:</strong> Preferencialmente inicie o contato via WhatsApp ou e-mail. 
+            Assim conseguimos registrar o atendimento e dar sequência com mais agilidade.
+        </p>
     </div>
 </div>
         
