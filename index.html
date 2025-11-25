@@ -234,7 +234,7 @@
                     <tr><td>chave</td><td>text</td><td>Chave única por talhão<a href="#det-ch" class="help-icon">?</a></td><td>2025_7_2211_2_PL2_5_P23_17</td></tr>
                     <tr><td>safra</td><td>int</td><td>Ano safra de referência<a href="#det-safra" class="help-icon">?</a></td><td>2025</td></tr>
                     <tr><td>client_id</td><td>int</td><td>ID do cliente (Fornecido pela SIGMA) <a href="#det-client_id" class="help-icon">?</a></td><td>7</td></tr>
-                     <tr><td>unidade</td><td>text</td><td>Unidade (nome da Usina) <a href="#det-unidade" class="help-icon">?</a></td><td>Usina Exemplo</td></tr>
+                    <tr><td>unidade</td><td>text</td><td>Unidade (nome da Usina) <a href="#det-unidade" class="help-icon">?</a></td><td>Usina Exemplo</td></tr>
                     <tr><td>fazenda</td><td>text</td><td>Número da fazenda<a href="#det-fazenda" class="help-icon">?</a></td><td>2211</td></tr>
                     <tr><td>setor</td><td>int</td><td>Identificador do setor<a href="#det-setor" class="help-icon">?</a></td><td>2</td></tr>
                     <tr><td>secao</td><td>text</td><td>Identificador da seção <a href="#det-secao" class="help-icon">?</a></td><td>PL2</td></tr>
@@ -403,9 +403,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>id</td><td>text</td><td>Identificador único do registro (chave composta)<a href="#det-id-praga" class="help-icon">?</a></td><td>2024_UEL_310080_2_17</td></tr>
+                <tr><td>id</td><td>text</td><td>Identificador único do registro (chave composta)<a href="#det-id-praga" class="help-icon">?</a></td><td>2024_7_310080_2_17</td></tr>
                 <tr><td>safra</td><td>int</td><td>Ano da safra<a href="#det-safra-praga" class="help-icon">?</a></td><td>2024</td></tr>
-                <tr><td>unidade</td><td>text</td><td>Nome ou código da usina/unidade<a href="#det-unidade-praga" class="help-icon">?</a></td><td>UEL</td></tr>
+                <tr><td>client_id</td><td>int</td><td>ID do cliente (Fornecido pela SIGMA) <a href="#det-client_id-praga" class="help-icon">?</a></td><td>7</td></tr>
+                <tr><td>unidade</td><td>text</td><td>Nome ou código da usina/unidade<a href="#det-unidade-praga" class="help-icon">?</a></td><td>Usina Exemplo</td></tr>
                 <tr><td>fazenda</td><td>text</td><td>Código da fazenda<a href="#det-fazenda-praga" class="help-icon">?</a></td><td>310080</td></tr>
                 <tr><td>bloco</td><td>int</td><td>Número do bloco<a href="#det-bloco-praga" class="help-icon">?</a></td><td>2</td></tr>
                 <tr><td>talhao</td><td>int</td><td>Número do talhão<a href="#det-talhao-praga" class="help-icon">?</a></td><td>17</td></tr>
@@ -433,8 +434,9 @@
         <div class="details-block">
             <h3>Detalhamento dos Campos</h3>
 
-            <div id="det-id-praga"><h3>id</h3><p>Chave única composta: <strong>safra_unidade_fazenda_bloco_talhao</strong>. Garante unicidade por levantamento.</p></div>
+            <div id="det-id-praga"><h3>id</h3><p>Chave única do talhão composta por: <strong>safra + client_id + fazenda + setor + secao + bloco + pivo + talhao </strong>, se por acaso não tiver algum desse campo, substituir por 0.</p></div>
             <div id="det-safra-praga"><h3>safra</h3><p>Ano da safra de referência.</p></div>
+            <div id="det-client_id-praga"><h3>client_id</h3><p>Código da <strong>SIGMA</strong> para referenciar cada cliente e suas unidades.</p></div>
             <div id="det-unidade-praga"><h3>unidade</h3><p>Código ou nome da usina.</p></div>
             <div id="det-fazenda-praga"><h3>fazenda / bloco / talhao</h3><p>Hierarquia geográfica do talhão amostrado.</p></div>
             <div id="det-data-praga"><h3>data</h3><p>Data do levantamento no campo (DD/MM/AAAA).</p></div>
