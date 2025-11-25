@@ -6,7 +6,6 @@
 <title>Sigma – Documentação de Integração</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
@@ -171,6 +170,7 @@
     <a class="nav-link" href="#intro">Tela Inicial</a>
     <a class="nav-link" href="#gerais">Dados Gerais</a>
     <a class="nav-link" href="#chuvas">Chuvas</a>
+    <a class="nav-link" href="#talhoes">Talhões (geometrias)</a>
     <a class="nav-link" href="#cig">Broca & Cigarrinha (Em breve)</a>
     <a class="nav-link" href="#solo">Pragas de Solo (Em breve)</a>
     <a class="nav-link" href="#perguntas">Perguntas Frequentes</a>
@@ -332,7 +332,7 @@
                 <div id="det-espacamento_plantado"><h3>espacamento_plantado</h3><p>Espaçamento planejado no plantio (metros).</p></div>
                 <div id="det-espacamento_real"><h3>espacamento_real</h3><p>Espaçamento real medido no campo.</p></div>
                 <div id="det-ambiente"><h3>ambiente</h3><p>Classificação de ambiente produtivo: A, B, C, D, E, F, G.</p></div>
-                <div id="det-variedade"><h3>variedade</h3><p>Código da variedade plantada, <strong>não use caracteres para separar</strong>.</p></div>
+                <div id="det-variedade"><h3>variedade</h3><p>Código da variedade plantada, <strong>mantenha uma padronização</strong>.</p></div>
                 <div id="det-maturacao"><h3>maturacao</h3><p>Classificação de maturação: PRECOCE, MEDIA, TARDIA.</p></div>
                 <div id="det-area_bd"><h3>area_bd</h3><p>Área total bruta cadastrada no sistema (ha).</p></div>
                 <div id="det-a_est_moagem"><h3>a_est_moagem</h3><p>Área planejada para moagem na safra atual.</p></div>
@@ -473,6 +473,84 @@
         <div id="det-data"><h3>data / ano / mes / semana / dia</h3><p>Data da medição no formato ISO 8601 (YYYY-MM-DD) e seus componentes extraídos para facilitar filtros e agrupamentos.</p></div>
         <div id="det-precipitacao"><h3>precipitacao</h3><p>Pluviometria total acumulada no dia (mm), com separador decimal ponto.</p></div>
         <div id="det-temp"><h3>temp_media / temp_min / temp_max</h3><p>Temperaturas registradas em graus Celsius (°C), com uma casa decimal.</p></div>
+    </div>
+</div>
+
+<div id="talhoes" class="section">
+    <h2>Dados de Talhões – Polígonos Georreferenciados</h2>
+    <p style="line-height: 1.8; margin-bottom: 15px;">
+        Dados relacionados à base de talhões da usina, polígonos georreferenciados. 
+        A consulta deve ser disponibilizada em formato *.json e conter os atributos elencados a seguir.
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Coluna</th>
+                <th>Tipo</th>
+                <th>Descrição</th>
+                <th>Exemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>id</td><td>text</td><td>Identificador único do talhão (ex: fazenda_setor_talhao)<a href="#det-id-talhao" class="help-icon">?</a></td><td>009_1_6</td></tr>
+            <tr><td>fazenda</td><td>text</td><td>Código da fazenda<a href="#det-fazenda" class="help-icon">?</a></td><td>"10001"</td></tr>
+            <tr><td>setor</td><td>text</td><td>Código do setor (numérico ou texto)<a href="#det-setor" class="help-icon">?</a></td><td>2, "AU", "SETOR 1"</td></tr>
+            <tr><td>secao</td><td>text</td><td>Identificação da seção (opcional)<a href="#det-secao" class="help-icon">?</a></td><td>2, "PL", "SECAO 2"</td></tr>
+            <tr><td>bloco</td><td>int</td><td>Identificação do bloco dentro do setor<a href="#det-bloco" class="help-icon">?</a></td><td>10</td></tr>
+            <tr><td>talhao</td><td>int</td><td>Código do talhão (número identificador)<a href="#det-talhao" class="help-icon">?</a></td><td>25</td></tr>
+            <tr><td>area_gis</td><td>float</td><td>Área do talhão em hectares (calculada via GIS)<a href="#det-area_gis" class="help-icon">?</a></td><td>5.5488754</td></tr>
+            <tr><td>tp_prop</td><td>text</td><td>Tipo de contrato/propriedade do talhão<a href="#det-tp_prop" class="help-icon">?</a></td><td>"Próprias", "Parceria", "Fornecedores", "Acionista", "SPOT"</td></tr>
+            <tr><td>pivo</td><td>text</td><td>Identificação do pivô ou sistema de irrigação (opcional)<a href="#det-pivo" class="help-icon">?</a></td><td>1, "10150", "P23", "R25", ""</td></tr>
+            <tr>
+                <td>geometria</td>
+                <td>json (GeoJSON)</td>
+                <td>Geometria do talhão em formato GeoJSON – CRS EPSG:4326 (WGS 84)<a href="#det-geometria" class="help-icon">?</a></td>
+                <td style="font-size: 0.82rem; word-break: break-all;">
+                    { "type": "Polygon", "coordinates": [ [ [ -48.123456, -21.987654 ], [ -48.123000, -21.987000 ], ... ] ] }
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="details-block">
+        <h3>Detalhamento dos Campos</h3>
+
+        <div id="det-id-talhao"><h3>id</h3><p>Identificador único do talhão. Recomenda-se formato <strong>fazenda_setor_talhao</strong> ou similar. Deve ser único em toda a base.</p></div>
+        <div id="det-fazenda"><h3>fazenda</h3><p>Código da fazenda (ex: 10001). Pode ser string para permitir códigos alfanuméricos.</p></div>
+        <div id="det-setor"><h3>setor</h3><p>Código do setor. Aceita valores numéricos ou texto (ex: "AU", "SETOR 1").</p></div>
+        <div id="det-secao"><h3>secao</h3><p>Subdivisão do setor (opcional). Ex: "PL", "SECAO 2".</p></div>
+        <div id="det-bloco"><h3>bloco</h3><p>Número do bloco dentro do setor. Usado em estruturas hierárquicas mais detalhadas.</p></div>
+        <div id="det-talhao"><h3>talhao</h3><p>Número sequencial do talhão. Valor inteiro positivo.</p></div>
+        <div id="det-area_gis"><h3>area_gis</h3><p>Área real do talhão em hectares, calculada a partir da geometria (GIS). Valor com até 6 casas decimais.</p></div>
+        <div id="det-tp_prop"><h3>tp_prop</h3><p>Tipo de contrato ou propriedade do talhão. Valores permitidos: <strong>Próprias, Parceria, Fornecedores, Acionista, SPOT</strong>.</p></div>
+        <div id="det-pivo"><h3>pivo</h3><p>Identificação do pivô central ou sistema de irrigação associado. Pode estar vazio se não houver.</p></div>
+
+        <div id="det-geometria"><h3>geometria</h3>
+            <p>Geometria do talhão no formato <strong>GeoJSON</strong> (Polygon ou MultiPolygon).</p>
+            <ul style="margin: 10px 0;">
+                <li><strong>Sistema de coordenadas obrigatório:</strong> <strong>EPSG:4326 (WGS 84)</strong></li>
+                <li><strong>Unidade:</strong> Graus decimais (latitude/longitude)</li>
+                <li><strong>Ordem das coordenadas:</strong> [longitude, latitude]</li>
+                <li><strong>Precisão recomendada:</strong> 6 casas decimais</li>
+                <li><strong>Anel externo:</strong> sentido horário (padrão GeoJSON)</li>
+            </ul>
+            <p>Exemplo válido (Polygon simples):</p>
+            <code style="display: block; margin: 10px 0; padding: 12px; background: #f8f8f8; font-size: 0.9rem; overflow-x: auto;">
+            {<br>
+            &nbsp;&nbsp;"type": "Polygon",<br>
+            &nbsp;&nbsp;"coordinates": [<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;[<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-48.123456, -21.987654],<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-48.123000, -21.987654],<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-48.123000, -21.988000],<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-48.123456, -21.988000],<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-48.123456, -21.987654]<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;]<br>
+            &nbsp;&nbsp;]<br>
+            }
+            </code>
+        </div>
     </div>
 </div>
 
