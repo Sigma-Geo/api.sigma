@@ -67,6 +67,7 @@ th { background: #f0f0f0; font-weight: 600; }
     <img class="logo" src="https://tomografia.sigmageotecnologias.com.br/assets/logo-B-uKcp4C.png"/>
     <a class="nav-link" href="#intro">Tela Inicial</a>
     <a class="nav-link" href="#gerais">Dados Gerais</a>
+    <a class="nav-link" href="#chuvas">Chuvas</a>
     <a class="nav-link" href="#cig">Broca & Cigarrinha (Em breve)</a>
     <a class="nav-link" href="#solo">Pragas de Solo (Em breve)</a>
 </div>
@@ -324,48 +325,118 @@ th { background: #f0f0f0; font-weight: 600; }
 
     </div>
 </div> --> 
+<div id="chuvas" class="section">
+    <h2>Dados das Estações Meteorológicas</h2>
+    <p style="line-height: 1.8; margin-bottom: 15px;">
+       Dados meteorológicos coletados nas estações localizadas nas fazendas da unidade. 
+       A consulta deve ser disponibilizada em formato *.json e conter os atributos elencados a seguir.
+    </p>
 
+    <table>
+        <thead>
+            <tr>
+                <th>Coluna</th>
+                <th>Tipo</th>
+                <th>Descrição</th>
+                <th>Exemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>estacao</td><td>text</td><td>Nome da estação de coleta<a href="#det-estacao" class="help-icon">?</a></td><td>Cidade A</td></tr>
+            <tr><td>fazenda</td><td>text</td><td>Nome da fazenda em que se localiza a estação de coleta<a href="#det-fazenda" class="help-icon">?</a></td><td>Fazenda XYZ</td></tr>
+            <tr><td>y_lat</td><td>float</td><td>Coordenada geográfica. Valor da latitude em graus decimais<a href="#det-y_lat" class="help-icon">?</a></td><td>-23.456789</td></tr>
+            <tr><td>x_long</td><td>float</td><td>Coordenada geográfica. Valor da longitude em graus decimais<a href="#det-x_long" class="help-icon">?</a></td><td>-46.789012</td></tr>
+            <tr><td>data</td><td>timestamp</td><td>Data de coleta, no formato ISO (YYYY-MM-DD)<a href="#det-data" class="help-icon">?</a></td><td>2023-05-15</td></tr>
+            <tr><td>ano</td><td>int</td><td>Ano da data de coleta<a href="#det-data" class="help-icon">?</a></td><td>2023</td></tr>
+            <tr><td>mes</td><td>int</td><td>Mês da data de coleta (1-12)<a href="#det-data" class="help-icon">?</a></td><td>5</td></tr>
+            <tr><td>semana</td><td>int</td><td>Semana do ano (ISO week number, 1-53)<a href="#det-data" class="help-icon">?</a></td><td>20</td></tr>
+            <tr><td>dia</td><td>int</td><td>Dia do mês da coleta<a href="#det-data" class="help-icon">?</a></td><td>15</td></tr>
+            <tr><td>precipitacao</td><td>float</td><td>Valor da precipitação registrada, em milímetros (mm)<a href="#det-precipitacao" class="help-icon">?</a></td><td>12.5</td></tr>
+            <tr><td>temp_media</td><td>float</td><td>Temperatura média registrada no dia (°C)<a href="#det-temp" class="help-icon">?</a></td><td>22.5</td></tr>
+            <tr><td>temp_min</td><td>float</td><td>Temperatura mínima registrada no dia (°C)<a href="#det-temp" class="help-icon">?</a></td><td>15.5</td></tr>
+            <tr><td>temp_max</td><td>float</td><td>Temperatura máxima registrada no dia (°C)<a href="#det-temp" class="help-icon">?</a></td><td>37.0</td></tr>
+        </tbody>
+    </table>
+
+    <div class="details-block">
+        <h3>Detalhamento dos Campos</h3>
+
+        <div id="det-estacao"><h3>estacao</h3><p>Nome identificador da estação meteorológica dentro da unidade/fazenda.</p></div>
+        <div id="det-fazenda"><h3>fazenda</h3><p>Nome completo da fazenda onde a estação está instalada.</p></div>
+        <div id="det-y_lat"><h3>y_lat</h3><p>Latitude da estação em graus decimais (datum WGS84). Valores negativos indicam hemisfério sul.</p></div>
+        <div id="det-x_long"><h3>x_long</h3><p>Longitude da estação em graus decimais (datum WGS84). Valores negativos indicam hemisfério oeste.</p></div>
+        <div id="det-data"><h3>data / ano / mes / semana / dia</h3><p>Data da medição no formato ISO 8601 (YYYY-MM-DD) e seus componentes extraídos para facilitar filtros e agrupamentos.</p></div>
+        <div id="det-precipitacao"><h3>precipitacao</h3><p>Pluviometria total acumulada no dia (mm), com separador decimal ponto.</p></div>
+        <div id="det-temp"><h3>temp_media / temp_min / temp_max</h3><p>Temperaturas registradas em graus Celsius (°C), com uma casa decimal.</p></div>
+    </div>
+</div>
+        
 <script>
 function downloadPDF() {
     const element = document.getElementById("full-content");
-    html2canvas(element, {
-        scale: 2,                    
-        useCORS: true,              
-        scrollY: -window.scrollY,    
-        windowWidth: document.documentElement.offsetWidth, 
-        height: element.scrollHeight, 
-        onclone: function(clonedDoc) {
-            clonedDoc.body.style.margin = "0";
-            clonedDoc.body.style.padding = "0";
-            clonedDoc.getElementById("full-content").style.marginTop = "20px";
-        }
-    }).then(canvas => {
-        const imgData = canvas.toDataURL("image/png");
-        const pdf = new jspdf.jsPDF({
-            orientation: "portrait",
-            unit: "mm",
-            format: "a4"
-        });
 
-        const pdfWidth = pdf.internal.pageSize.getWidth();
-        const pdfHeight = pdf.internal.pageSize.getHeight();
+    const MARGIN = 10;
+
+    html2canvas(element, {
+        scale: 2,
+        useCORS: true,
+        scrollY: -window.scrollY,
+    }).then(canvas => {
+
+        const pdf = new jspdf.jsPDF("p", "mm", "a4");
+
+        const pageWidth = pdf.internal.pageSize.getWidth();
+        const pageHeight = pdf.internal.pageSize.getHeight();
+
+        const usableWidth = pageWidth - MARGIN * 2;
+        const usableHeight = pageHeight - MARGIN * 2;
+
         const imgWidth = canvas.width;
         const imgHeight = canvas.height;
-        const ratio = imgWidth / pdfWidth;
-        let heightLeft = imgHeight / ratio;
+
+        const ratio = imgWidth / usableWidth;
+        const sliceHeight = usableHeight * ratio;  
+
         let position = 0;
 
-        pdf.addImage(imgData, "PNG", 0, position, pdfWidth, imgHeight / ratio);
-        heightLeft -= pdfHeight;
+        const sliceCanvas = document.createElement("canvas");
+        const sliceContext = sliceCanvas.getContext("2d");
 
-        while (heightLeft > 0) {
-            position = heightLeft - imgHeight / ratio;
-            pdf.addPage();
-            pdf.addImage(imgData, "PNG", 0, position, pdfWidth, imgHeight / ratio);
-            heightLeft -= pdfHeight;
+        sliceCanvas.width = imgWidth;
+        sliceCanvas.height = sliceHeight;
+
+        while (position < imgHeight) {
+            sliceContext.clearRect(0, 0, sliceCanvas.width, sliceCanvas.height);
+
+            sliceContext.drawImage(
+                canvas,
+                0,
+                position,
+                imgWidth,
+                sliceHeight,
+                0,
+                0,
+                imgWidth,
+                sliceHeight
+            );
+
+            let imgData = sliceCanvas.toDataURL("image/png");
+
+            if (position !== 0) pdf.addPage();
+
+            pdf.addImage(
+                imgData,
+                "PNG",
+                MARGIN,
+                MARGIN,
+                usableWidth,
+                usableHeight
+            );
+
+            position += sliceHeight;
         }
 
-        pdf.save("documentacao_sigma_completa.pdf");
+        pdf.save("Tomografia_Sigma.pdf");
     });
 }
 </script>
