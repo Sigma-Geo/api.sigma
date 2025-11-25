@@ -173,6 +173,7 @@
     <a class="nav-link" href="#talhoes">Talhões (geometrias)</a>
     <a class="nav-link" href="#cig">Broca & Cigarrinha (Em breve)</a>
     <a class="nav-link" href="#solo">Pragas de Solo (Em breve)</a>
+    <a class="nav-link" href="#endpoints">Autenticação & Endpoints</a>
     <a class="nav-link" href="#perguntas">Perguntas Frequentes</a>
     <a class="nav-link" href="#contatos">Contato</a>
 </div>
@@ -554,6 +555,108 @@
     </div>
 </div>
 
+<div id="endpoints" class="section">
+    <h2>Autenticação e Endpoints da API</h2>
+    <p style="line-height: 1.8; margin-bottom: 20px;">
+        A fim de garantir a <strong>integridade e segurança</strong> da informação, será gerado um <strong>token de acesso (chave de API)</strong> único, individual e intransferível. 
+        Em caso de suspeita de vazamento, o token será revogado imediatamente e um novo será emitido.
+    </p>
+
+    <div style="background: #f0f7ff; padding: 18px; border-radius: 10px; border-left: 5px solid #1a5fb4; margin: 25px 0;">
+        <p style="margin: 0; font-size: 1rem; color: #1a5fb4;">
+            <strong>Importante:</strong> Nunca compartilhe seu token. Ele é pessoal e intransferível.
+        </p>
+    </div>
+
+    <h3 style="color: var(--accent); margin-top: 30px;">Como usar o token (Header)</h3>
+    <p>Inclua o token em todas as requisições no cabeçalho HTTP:</p>
+
+    <table style="background: #f9f9f9; margin: 20px 0;">
+        <thead>
+            <tr><th>Header</th><th>Valor</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><code>Authorization</code></td><td><code>Bearer edc40e3b-4002-4590-9bba-847200a80e84</code></td></tr>
+        </tbody>
+    </table>
+
+    <p><strong>Exemplo completo com cURL:</strong></p>
+    <code style="display: block; padding: 14px; background: #2d2d2d; color: #f8f8f2; border-radius: 8px; overflow-x: auto; font-size: 0.9rem;">
+curl -X GET "https://integracaotomo.sigmageotecnologias.com.br/api/historico-safra?usina=usina-exemplo" \<br>
+&nbsp;&nbsp;-H "Authorization: Bearer edc40e3b-4002-4590-9bba-847200a80e84"
+    </code>
+
+    <h3 style="color: var(--accent); margin-top: 40px;">Endpoints Disponíveis</h3>
+    <p>Todos os endpoints utilizam o mesmo padrão de autenticação e retornam JSON.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Recurso</th>
+                <th>Método</th>
+                <th>Endpoint</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Dados Gerais</strong></td>
+                <td>GET</td>
+                <td><code>/api/historico-safra?usina=<strong>{usina}</strong></code></td>
+                <td>Retorna o histórico completo de safras e talhões</td>
+            </tr>
+            <tr>
+                <td><strong>Dados Gerais</strong></td>
+                <td>POST</td>
+                <td><code>/api/historico-safra?usina=<strong>{usina}</strong></code></td>
+                <td>Envia/atualiza dados gerais da safra</td>
+            </tr>
+
+            <tr>
+                <td><strong>Chuvas / Estações</strong></td>
+                <td>GET</td>
+                <td><code>/api/precipitacao?usina=<strong>{usina}</strong></code></td>
+                <td>Retorna dados diários de precipitação e temperatura</td>
+            </tr>
+            <tr>
+                <td><strong>Chuvas / Estações</strong></td>
+                <td>POST</td>
+                <td><code>/api/precipitacao?usina=<strong>{usina}</strong></code></td>
+                <td>Envia novos registros meteorológicos</td>
+            </tr>
+
+            <tr>
+                <td><strong>Talhões (geometrias)</strong></td>
+                <td>GET</td>
+                <td><code>/api/base-talhoes?usina=<strong>{usina}</strong></code></td>
+                <td>Retorna todos os talhões com geometria GeoJSON (EPSG:4326)</td>
+            </tr>
+            <tr>
+                <td><strong>Talhões (geometrias)</strong></td>
+                <td>POST</td>
+                <td><td><code>/api/base-talhoes?usina=<strong>{usina}</strong></code></td>
+                <td>Envia/atualiza base de talhões georreferenciados</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="margin-top: 30px; padding: 16px; background: #fff9e6; border-radius: 8px; border-left: 4px solid #C98345;">
+        <p style="margin: 0; color: #8B5A2B;">
+            <strong>Base URL (produção):</strong><br>
+            <code style="background: none; color: #C98345; font-size: 1rem;">
+            https://integracaotomo.sigmageotecnologias.com.br/api/
+            </code>
+        </p>
+    </div>
+
+    <div style="margin-top: 25px; padding: 18px; background: #f0f8ff; border-radius: 8px; border-left: 4px solid #4a90e2;">
+        <p style="margin: 0; font-size: 0.95rem; color: #1a5fb4;">
+            <strong>Dica:</strong> Substitua <code>{usina}</code> pelo código/nome da sua usina (ex: <code>usina-exemplo</code>, <code>usina-abc</code>, etc). 
+            Esse parâmetro é obrigatório em todas as chamadas.
+        </p>
+    </div>
+</div>
+
 <div id="perguntas" class="section">
     <h2>Perguntas Frequentes – API Tomografia do Canavial</h2>
     <p style="line-height: 1.8; margin-bottom: 20px;">
@@ -575,7 +678,7 @@
 
         <div style="padding: 14px; background: #f9f9f9; border-left: 4px solid var(--accent);">
             <strong>IP do servidor</strong><br>
-            162.240.50.27
+            10.17.30.11
         </div>
 
         <div style="padding: 14px; background: #f9f9f9; border-left: 4px solid var(--accent);">
