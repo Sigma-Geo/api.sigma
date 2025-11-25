@@ -3,62 +3,165 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Sigma</title>
+<title>Sigma – Documentação de Integração</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <style>
-:root {
-    --sidebar-bg: #1D1D1B;
-    --sidebar-hover: #C98345;
-    --accent: #C98345;
-    --text: #222;
-    --card-bg: #fff;
-    --shadow: rgba(0,0,0,0.12);
-}
+    :root {
+        --sidebar-bg: #1D1D1B;
+        --sidebar-hover: #C98345;
+        --accent: #C98345;
+        --text: #222;
+        --card-bg: #fff;
+        --shadow: rgba(0,0,0,0.12);
+    }
 
-body { margin: 0; font-family: Arial, sans-serif; background: #f3f3f3; display: flex; }
-.sidebar { width: 280px; background: var(--sidebar-bg); height: 100vh; position: fixed; padding: 25px 20px; overflow-y: auto; }
-.sidebar img.logo { width: 180px; display: block; margin: 0 auto 30px auto; }
-.nav-link { display: block; padding: 12px; margin-bottom: 6px; color: white; text-decoration: none; font-size: 15px; border-radius: 5px; transition: 0.2s; }
-.nav-link:hover { background: var(--sidebar-hover); }
+    body, html, input, button, textarea, select {
+        font-family: 'Montserrat', Arial, sans-serif !important;
+    }
 
-.content { margin-left: 300px; padding: 40px; width: calc(100% - 300px); }
-.section { background: var(--card-bg); padding: 30px; border-radius: 10px; margin-bottom: 35px; box-shadow: 0 4px 15px var(--shadow); }
-.section h2 { margin-top: 0; color: var(--accent); }
+    body { 
+        margin: 0; 
+        background: #f3f3f3; 
+        display: flex;
+        color: #333;
+        font-weight: 400;
+        line-height: 1.6;
+    }
 
-.btn { background: var(--accent); color: white; border: none; padding: 12px 25px; border-radius: 6px; cursor: pointer; font-size: 15px; margin-bottom: 25px; transition: 0.2s; }
-.btn:hover { opacity: 0.85; }
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 600;
+        color: var(--accent);
+        margin-top: 0;
+    }
 
-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.94rem; }
-th, td { padding: 10px; border: 1px solid #ddd; text-align: left; vertical-align: top; }
-th { background: #f0f0f0; font-weight: 600; }
+    h2 {
+        font-size: 1.65rem;
+        margin-bottom: 20px;
+    }
 
-.help-icon {
-    font-size: 13px;
-    color: #4a90e2;
-    text-decoration: none;
-    margin-left: 6px;
-    font-weight: bold;
-}
-.help-icon:hover { color: #2171c1; }
+    .sidebar { 
+        width: 280px; 
+        background: var(--sidebar-bg); 
+        height: 100vh; 
+        position: fixed; 
+        padding: 25px 20px; 
+        overflow-y: auto; 
+        color: white;
+    }
 
-.details-block {
-    margin-top: 60px;
-    padding-top: 30px;
-    border-top: 2px solid #ddd;
-}
-.details-block h3 {
-    color: var(--accent);
-    margin: 35px 0 12px 0;
-    font-size: 1.1rem;
-}
-.details-block p {
-    line-height: 1.6;
-    margin: 8px 0;
-    color: #444;
-}
+    .sidebar img.logo { 
+        width: 180px; 
+        display: block; 
+        margin: 0 auto 40px auto; 
+    }
+
+    .nav-link { 
+        display: block; 
+        padding: 14px; 
+        margin-bottom: 8px; 
+        color: white; 
+        text-decoration: none; 
+        font-size: 15px; 
+        font-weight: 500;
+        border-radius: 6px; 
+        transition: 0.25s; 
+    }
+
+    .nav-link:hover { 
+        background: var(--sidebar-hover); 
+        transform: translateX(6px);
+    }
+
+    .content { 
+        margin-left: 300px; 
+        padding: 40px; 
+        width: calc(100% - 300px); 
+    }
+
+    .section { 
+        background: var(--card-bg); 
+        padding: 34px; 
+        border-radius: 12px; 
+        margin-bottom: 40px; 
+        box-shadow: 0 6px 20px var(--shadow); 
+    }
+
+    .btn { 
+        background: var(--accent); 
+        color: white; 
+        border: none; 
+        padding: 14px 32px; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        font-size: 16px; 
+        font-weight: 600;
+        margin-bottom: 30px; 
+        transition: 0.25s; 
+        box-shadow: 0 4px 12px rgba(201,131,69,0.3);
+    }
+
+    .btn:hover { 
+        opacity: 0.9; 
+        transform: translateY(-2px);
+    }
+
+    table { 
+        width: 100%; 
+        border-collapse: collapse; 
+        margin-top: 18px; 
+        font-size: 0.95rem; 
+    }
+
+    th, td { 
+        padding: 12px 14px; 
+        border: 1px solid #ddd; 
+        text-align: left; 
+        vertical-align: top; 
+    }
+
+    th { 
+        background: #f8f5f2; 
+        font-weight: 600; 
+        color: #444;
+    }
+
+    .help-icon {
+        font-size: 13px;
+        color: #C98345;
+        text-decoration: none;
+        margin-left: 6px;
+        font-weight: bold;
+    }
+
+    .help-icon:hover { 
+        color: #a56635; 
+    }
+
+    .details-block {
+        margin-top: 70px;
+        padding-top: 35px;
+        border-top: 2px solid #eee;
+    }
+
+    .details-block h3 {
+        color: var(--accent);
+        margin: 40px 0 14px 0;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    code {
+        background: #f1f1f1;
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-size: 0.92em;
+        font-weight: 500;
+    }
 </style>
 </head>
 <body>
