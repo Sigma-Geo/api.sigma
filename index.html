@@ -613,13 +613,13 @@ curl -X GET "https://integracaotomo.sigmageotecnologias.com.br/api/historico-saf
             </tr>
 
             <tr>
-                <td><strong>Chuvas / Estações</strong></td>
+                <td><strong>Chuvas</strong></td>
                 <td>GET</td>
                 <td><code>/api/precipitacao?usina=<strong>{usina}</strong></code></td>
                 <td>Retorna dados diários de precipitação e temperatura</td>
             </tr>
             <tr>
-                <td><strong>Chuvas / Estações</strong></td>
+                <td><strong>Chuvas</strong></td>
                 <td>POST</td>
                 <td><code>/api/precipitacao?usina=<strong>{usina}</strong></code></td>
                 <td>Envia novos registros meteorológicos</td>
@@ -631,10 +631,11 @@ curl -X GET "https://integracaotomo.sigmageotecnologias.com.br/api/historico-saf
                 <td><code>/api/base-talhoes?usina=<strong>{usina}</strong></code></td>
                 <td>Retorna todos os talhões com geometria GeoJSON (EPSG:4326)</td>
             </tr>
-            <tr>
+
+             <tr>
                 <td><strong>Talhões (geometrias)</strong></td>
                 <td>POST</td>
-                <td><td><code>/api/base-talhoes?usina=<strong>{usina}</strong></code></td>
+                <td><code>/api/base-talhoes?usina=<strong>{usina}</strong></code></td>
                 <td>Envia/atualiza base de talhões georreferenciados</td>
             </tr>
         </tbody>
