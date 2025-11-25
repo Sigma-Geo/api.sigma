@@ -448,7 +448,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr><td>estacao</td><td>text</td><td>Nome da estação de coleta<a href="#det-estacao" class="help-icon">?</a></td><td>Cidade A</td></tr>
+            <tr><td>local</td><td>text</td><td>Nome da estação de coleta<a href="#det-local" class="help-icon">?</a></td><td>Cidade A</td></tr>
             <tr><td>fazenda</td><td>text</td><td>Nome da fazenda em que se localiza a estação de coleta<a href="#det-fazenda" class="help-icon">?</a></td><td>Fazenda XYZ</td></tr>
             <tr><td>y_lat</td><td>float</td><td>Coordenada geográfica. Valor da latitude em graus decimais<a href="#det-y_lat" class="help-icon">?</a></td><td>-23.456789</td></tr>
             <tr><td>x_long</td><td>float</td><td>Coordenada geográfica. Valor da longitude em graus decimais<a href="#det-x_long" class="help-icon">?</a></td><td>-46.789012</td></tr>
@@ -461,19 +461,23 @@
             <tr><td>temp_media</td><td>float</td><td>Temperatura média registrada no dia (°C)<a href="#det-temp" class="help-icon">?</a></td><td>22.5</td></tr>
             <tr><td>temp_min</td><td>float</td><td>Temperatura mínima registrada no dia (°C)<a href="#det-temp" class="help-icon">?</a></td><td>15.5</td></tr>
             <tr><td>temp_max</td><td>float</td><td>Temperatura máxima registrada no dia (°C)<a href="#det-temp" class="help-icon">?</a></td><td>37.0</td></tr>
+            <tr><td>hum_media</td><td>float</td><td>Humidade média registrada no dia (%)<a href="#det-hum" class="help-icon">?</a></td><td>80.6</td></tr>
+            <tr><td>hum_min</td><td>float</td><td>Humidade mínima registrada no dia (%)<a href="#det-hum" class="help-icon">?</a></td><td>30.2</td></tr>
+            <tr><td>hum_max</td><td>float</td><td>Humidade máxima registrada no dia (%)<a href="#det-hum" class="help-icon">?</a></td><td>99.9</td></tr>
         </tbody>
     </table>
 
     <div class="details-block">
         <h3>Detalhamento dos Campos</h3>
 
-        <div id="det-estacao"><h3>estacao</h3><p>Nome identificador da estação meteorológica dentro da unidade/fazenda.</p></div>
+        <div id="det-local"><h3>local</h3><p>Nome identificador da estação meteorológica dentro da unidade/fazenda.</p></div>
         <div id="det-fazenda"><h3>fazenda</h3><p>Nome completo da fazenda onde a estação está instalada.</p></div>
         <div id="det-y_lat"><h3>y_lat</h3><p>Latitude da estação em graus decimais (datum WGS84). Valores negativos indicam hemisfério sul.</p></div>
         <div id="det-x_long"><h3>x_long</h3><p>Longitude da estação em graus decimais (datum WGS84). Valores negativos indicam hemisfério oeste.</p></div>
         <div id="det-data"><h3>data / ano / mes / semana / dia</h3><p>Data da medição no formato ISO 8601 (YYYY-MM-DD) e seus componentes extraídos para facilitar filtros e agrupamentos.</p></div>
         <div id="det-precipitacao"><h3>precipitacao</h3><p>Pluviometria total acumulada no dia (mm), com separador decimal ponto.</p></div>
         <div id="det-temp"><h3>temp_media / temp_min / temp_max</h3><p>Temperaturas registradas em graus Celsius (°C), com uma casa decimal.</p></div>
+        <div id="det-hum"><h3>hum_media / hum_min / hum_max</h3><p>Humidade registradas em percentual, com uma casa decimal.</p></div>
     </div>
 </div>
 
