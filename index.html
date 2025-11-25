@@ -172,7 +172,7 @@
     <a class="nav-link" href="#chuvas">Chuvas</a>
     <a class="nav-link" href="#talhoes">Talhões (geometrias)</a>
     <a class="nav-link" href="#cig">Broca & Cigarrinha (Em breve)</a>
-    <a class="nav-link" href="#solo">Pragas de Solo (Em breve)</a>
+    <a class="nav-link" href="#solo">Pragas de Solo</a>
     <a class="nav-link" href="#endpoints">Autenticação & Endpoints</a>
     <a class="nav-link" href="#perguntas">Perguntas Frequentes</a>
     <a class="nav-link" href="#contatos">Contato</a>
@@ -385,6 +385,68 @@
                 <div id="det-reforma_real"><h3>reforma_real</h3><p>Indica se a reforma já foi executada.</p></div>
             </div>
         </div>
+        
+        <div id="solo" class="section">
+        <h2>Pragas de Solo – Levantamento Subterrâneo</h2>
+        <p style="line-height: 1.8; margin-bottom: 15px;">
+            Dados de monitoramento de pragas subterrâneas em talhões de cana-de-açúcar. 
+            A consulta deve ser disponibilizada em formato *.json e conter os atributos elencados a seguir.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Coluna</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                    <th>Exemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>id</td><td>text</td><td>Identificador único do registro (chave composta)<a href="#det-id-praga" class="help-icon">?</a></td><td>2024_UEL_310080_2_17</td></tr>
+                <tr><td>safra</td><td>int</td><td>Ano da safra<a href="#det-safra-praga" class="help-icon">?</a></td><td>2024</td></tr>
+                <tr><td>unidade</td><td>text</td><td>Nome ou código da usina/unidade<a href="#det-unidade-praga" class="help-icon">?</a></td><td>UEL</td></tr>
+                <tr><td>fazenda</td><td>text</td><td>Código da fazenda<a href="#det-fazenda-praga" class="help-icon">?</a></td><td>310080</td></tr>
+                <tr><td>bloco</td><td>int</td><td>Número do bloco<a href="#det-bloco-praga" class="help-icon">?</a></td><td>2</td></tr>
+                <tr><td>talhao</td><td>int</td><td>Número do talhão<a href="#det-talhao-praga" class="help-icon">?</a></td><td>17</td></tr>
+                <tr><td>data</td><td>timestamp</td><td>Data do levantamento (DD/MM/AAAA)<a href="#det-data-praga" class="help-icon">?</a></td><td>9/15/2025</td></tr>
+                <tr><td>n_ponto</td><td>int</td><td>Número do ponto de amostragem<a href="#det-nponto" class="help-icon">?</a></td><td>0</td></tr>
+                <tr><td>cup_gen</td><td>int</td><td>Presença de cupins (gênero)<a href="#det-cupgen" class="help-icon">?</a></td><td>0</td></tr>
+                <tr><td>cup_danos_touceiras</td><td>text</td><td>Danos por cupins nas touceiras (S/N ou escala)<a href="#det-cupdan" class="help-icon">?</a></td><td>S</td></tr>
+                <tr><td>cup_nota_populacional</td><td>int</td><td>Nota populacional de cupins (0. 0–5)<a href="#det-cupnota" class="help-icon">?</a></td><td>2</td></tr>
+                <tr><td>sph_rizomas_totais</td><td>int</td><td>Total de rizomas coletados<a href="#det-sphriz" class="help-icon">?</a></td><td>700</td></tr>
+                <tr><td>sph_rizomas_atacados</td><td>int</td><td>Rizomas atacados por Sphenophorus<a href="#det-sphata" class="help-icon">?</a></td><td>13</td></tr>
+                <tr><td>sph_larvas</td><td>int</td><td>Larvas de Sphenophorus levis (bicudo-da-cana)<a href="#det-sphlar" class="help-icon">?</a></td><td>1</td></tr>
+                <tr><td>sph_pupas</td><td>int</td><td>Pupas de Sphenophorus<a href="#det-sphpup" class="help-icon">?</a></td><td>0</td></tr>
+                <tr><td>sph_adultos</td><td>int</td><td>Adultos de Sphenophorus<a href="#det-sphadu" class="help-icon">?</a></td><td>3</td></tr>
+                <tr><td>mig_larvas</td><td>int</td><td>Larvas de Migdolus fryanus (broca-da-raiz)<a href="#det-miglar" class="help-icon">?</a></td><td>0</td></tr>
+                <tr><td>qnt_pao_galinha</td><td>int</td><td>Ninhos de formiga saúva (pão-de-galinha)<a href="#det-pao" class="help-icon">?</a></td><td>12</td></tr>
+                <tr><td>qnt_larva_arame</td><td>int</td><td>Larvas de coró / besouro-arame<a href="#det-larva" class="help-icon">?</a></td><td>22</td></tr>
+                <tr><td>qnt_naupactus</td><td>int</td><td>Gorgulhos (Naupactus spp.)<a href="#det-naup" class="help-icon">?</a></td><td>30</td></tr>
+                <tr><td>qnt_eucalyptera</td><td>int</td><td>Eucalyptera spp.<a href="#det-euca" class="help-icon">?</a></td><td>4</td></tr>
+                <tr><td>qnt_perola_terra</td><td>int</td><td>Pérola-da-terra (Eurhizococcus brasiliensis)<a href="#det-perola" class="help-icon">?</a></td><td>8</td></tr>
+                <tr><td>qnt_percevejo_castanho</td><td>int</td><td>Percevejo-castanho-do-solo<a href="#det-perc" class="help-icon">?</a></td><td>10</td></tr>
+                <tr><td>qnt_hiponeuma</td><td>int</td><td>Hiponeuma spp.<a href="#det-hipo" class="help-icon">?</a></td><td>10</td></tr>
+            </tbody>
+        </table>
+
+        <div class="details-block">
+            <h3>Detalhamento dos Campos</h3>
+
+            <div id="det-id-praga"><h3>id</h3><p>Chave única composta: <strong>safra_unidade_fazenda_bloco_talhao</strong>. Garante unicidade por levantamento.</p></div>
+            <div id="det-safra-praga"><h3>safra</h3><p>Ano da safra de referência.</p></div>
+            <div id="det-unidade-praga"><h3>unidade</h3><p>Código ou nome da usina.</p></div>
+            <div id="det-fazenda-praga"><h3>fazenda / bloco / talhao</h3><p>Hierarquia geográfica do talhão amostrado.</p></div>
+            <div id="det-data-praga"><h3>data</h3><p>Data do levantamento no campo (DD/MM/AAAA).</p></div>
+            <div id="det-nponto"><h3>n_ponto</h3><p>Número sequencial do ponto dentro do talhão.</p></div>
+            <div id="det-cupgen"><h3>cup_gen / CUP_DANOS_TOUCEIRAS / cup_nota_populacional</h3><p>Indicadores de presença e dano por cupins.</p></div>
+            <div id="det-sphriz"><h3>sph_*</h3><p>Contagem de rizomas e estágios do bicudo-da-cana (Sphenophorus levis).</p></div>
+            <div id="det-miglar"><h3>mig_larvas</h3><p>Larvas da broca-da-raiz (Migdolus fryanus).</p></div>
+            <div id="det-pao"><h3>qnt_pao_galinha</h3><p>Ninhos de formiga saúva.</p></div>
+            <div id="det-larva"><h3>qnt_larva_arame</h3><p>Larvas de besouro-arame.</p></div>
+            <div id="det-naup"><h3>qnt_naupactus / qnt_eucalyptera / qnt_perola_terra / qnt_percevejo_castanho / qnt_hiponeuma</h3><p>Contagem de outras pragas subterrâneas relevantes.</p></div>
+        </div>
+    </div>
 
         <!-- BROCA & CIGARRINHA
         <div id="cig" class="section">
@@ -406,29 +468,6 @@
                 <tr><td>C_ESPUMA/METRO</td></tr>
             </table>
         </div>
-
-        PRAGAS DE SOLO -->
-        <!-- <div id="solo" class="section">
-            <h2>Pragas de Solo</h2>
-            <p>Informações de levantamento de pragas subterrâneas:</p>
-            <table>
-                <tr><th>Colunas</th></tr>
-                <tr><td>ID</td></tr>
-                <tr><td>SAFRA</td></tr>
-                <tr><td>UNIDADE</td></tr>
-                <tr><td>FAZENDA</td></tr>
-                <tr><td>BLOCO</td></tr>
-                <tr><td>TALHAO</td></tr>
-                <tr><td>DATA</td></tr>
-                <tr><td>N_PONTO</td></tr>
-                <tr><td>CUP_GEN</td></tr>
-                <tr><td>CUP_DANOS_TOUCEIRAS</td></tr>
-                <tr><td>SPH_LARVAS</td></tr>
-                <tr><td>QNT_LARVA_ARAME</td></tr>
-                <tr><td>QNT_PEROLA_TERRA</td></tr>
-            </table>
-        </div>
-
     </div>
 </div> --> 
 <div id="chuvas" class="section">
