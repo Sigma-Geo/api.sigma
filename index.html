@@ -127,6 +127,7 @@ th { background: #f0f0f0; font-weight: 600; }
                     <tr><td>chave</td><td>text</td><td>Chave única por talhão<a href="#det-ch" class="help-icon">?</a></td><td>2025_7_2211_2_PL2_5_P23_17</td></tr>
                     <tr><td>safra</td><td>int</td><td>Ano safra de referência<a href="#det-safra" class="help-icon">?</a></td><td>2025</td></tr>
                     <tr><td>client_id</td><td>int</td><td>ID do cliente (Fornecido pela SIGMA) <a href="#det-client_id" class="help-icon">?</a></td><td>7</td></tr>
+                     <tr><td>unidade</td><td>int</td><td>Unidade (nome da Usina) <a href="#det-client_id" class="help-icon">?</a></td><td>7</td></tr>
                     <tr><td>fazenda</td><td>text</td><td>Número da fazenda<a href="#det-fazenda" class="help-icon">?</a></td><td>2211</td></tr>
                     <tr><td>setor</td><td>int</td><td>Identificador do setor<a href="#det-setor" class="help-icon">?</a></td><td>2</td></tr>
                     <tr><td>secao</td><td>text</td><td>Identificador da seção <a href="#det-secao" class="help-icon">?</a></td><td>PL2</td></tr>
@@ -205,6 +206,7 @@ th { background: #f0f0f0; font-weight: 600; }
                 <div id="det-ch"><h3>chave</h3><p>Chave única do talhão composta por: <strong>safra + client_id + fazenda + setor + secao + bloco + pivo + talhao </strong>, se por acaso não tiver algum desse campo, substituir por 0.</p></div>
                 <div id="det-safra"><h3>safra</h3><p>Ano da safra agrícola do talhão de referência (ex: 2025 = safra 2025).</p></div>
                 <div id="det-client_id"><h3>client_id</h3><p>Código da <strong>SIGMA</strong> para referenciar cada cliente e suas unidades.</p></div>
+                <div id="det-unidade"><h3>unidade</h3><p>Nome da Usina <strong>SIGMA</strong> para referenciar ao nome fantasia da Usina/Unidade.</p></div>
                 <div id="det-fazenda"><h3>fazenda</h3><p>Código para referenciar a fazenda.</p></div>
                 <div id="det-setor"><h3>setor</h3><p>Código para referenciar o setor, se não houver, use: <strong>0</strong>.</p></div>
                 <div id="det-secao"><h3>secao</h3><p>Código para referenciar a seção, se não houver, use: <strong>"0"</strong>.</p></div>
