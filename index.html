@@ -344,7 +344,7 @@
                     <tr><td>chave</td><td>text</td><td>Chave única por talhão<a href="#det-ch" class="help-icon">?</a></td><td>2025_7_2211_2_PL2_5_P23_17</td></tr>
                     <tr><td>safra</td><td>int</td><td>Ano safra de referência<a href="#det-safra" class="help-icon">?</a></td><td>2025</td></tr>
                     <tr><td>client_id</td><td>int</td><td>ID do cliente (Fornecido pela SIGMA) <a href="#det-client_id" class="help-icon">?</a></td><td>7</td></tr>
-                    <tr><td>unidade</td><td>text</td><td>Unidade (nome da Usina) <a href="#det-unidade" class="help-icon">?</a></td><td>Usina Exemplo</td></tr>
+                    <tr><td>unidade</td><td>text</td><td>Unidade (nome da Usina) <a href="#det-unidade" class="help-icon">?</a></td><td>USINA EXEMPLO</td></tr>
                     <tr><td>fazenda</td><td>text</td><td>Número da fazenda<a href="#det-fazenda" class="help-icon">?</a></td><td>2211</td></tr>
                     <tr><td>setor</td><td>int</td><td>Identificador do setor<a href="#det-setor" class="help-icon">?</a></td><td>2</td></tr>
                     <tr><td>secao</td><td>text</td><td>Identificador da seção <a href="#det-secao" class="help-icon">?</a></td><td>PL2</td></tr>
@@ -646,7 +646,7 @@
                     <tr><td>chave</td><td>text</td><td>Chave única do talhão<a href="#det-lf-chave" class="help-icon">?</a></td><td>2025_7_2211_2_PL2_5_P23_17</td></tr>
                     <tr><td>safra</td><td>int</td><td>Ano safra de referência<a href="#det-lf-safra" class="help-icon">?</a></td><td>2025</td></tr>
                     <tr><td>client_id</td><td>int</td><td>ID do cliente (fornecido pela SIGMA)<a href="#det-lf-client_id" class="help-icon">?</a></td><td>7</td></tr>
-                    <tr><td>unidade</td><td>text</td><td>Nome da usina/unidade<a href="#det-lf-unidade" class="help-icon">?</a></td><td>Usina Exemplo</td></tr>
+                    <tr><td>unidade</td><td>text</td><td>Nome da usina/unidade<a href="#det-lf-unidade" class="help-icon">?</a></td><td>USINA EXEMPLO</td></tr>
                     <tr><td>fazenda</td><td>text</td><td>Número da fazenda<a href="#det-lf-fazenda" class="help-icon">?</a></td><td>2211</td></tr>
                     <tr><td>setor</td><td>int</td><td>Identificador do setor<a href="#det-lf-setor" class="help-icon">?</a></td><td>2</td></tr>
                     <tr><td>secao</td><td>text</td><td>Identificador da seção<a href="#det-lf-secao" class="help-icon">?</a></td><td>PL2</td></tr>
@@ -658,11 +658,11 @@
                     <tr><td>lf_area_levantada</td><td>float</td><td>Área efetivamente levantada (ha)<a href="#det-lf-area_lev" class="help-icon">?</a></td><td>22.19</td></tr>
                     <tr><td>lf_area_representada</td><td>float</td><td>Área representada pelo levantamento (ha)<a href="#det-lf-area_rep" class="help-icon">?</a></td><td>40.48</td></tr>
                     <tr><td>lf_area_monitorada</td><td>float</td><td>Área total monitorada (ha)<a href="#det-lf-area_mon" class="help-icon">?</a></td><td>62.67</td></tr>
-                    <tr><td>lf_aderencia</td><td>text</td><td>Aderência ao cronograma<a href="#det-lf-aderencia" class="help-icon">?</a></td><td>Com Agenda</td></tr>
+                    <tr><td>lf_aderencia</td><td>text</td><td>Aderência ao cronograma<a href="#det-lf-aderencia" class="help-icon">?</a></td><td>COM AGENDA</td></tr>
                     <tr><td>lf_canas_avaliadas</td><td>int</td><td>Total de canas avaliadas<a href="#det-lf-canas" class="help-icon">?</a></td><td>125</td></tr>
                     <tr><td>lf_numero_canas_com_lf</td><td>int</td><td>Cana com presença de lagarta fora<a href="#det-lf-numero" class="help-icon">?</a></td><td>0</td></tr>
                     <tr><td>lf_porcentagem</td><td>float</td><td>Percentual de infestação<a href="#det-lf-porcentagem" class="help-icon">?</a></td><td>0.0</td></tr>
-                    <tr><td>lf_suscetibilidade</td><td>text</td><td>Classe de suscetibilidade da variedade<a href="#det-lf-suscetibilidade" class="help-icon">?</a></td><td>3. Intermediária</td></tr>
+                    <tr><td>lf_suscetibilidade</td><td>text</td><td>Classe de suscetibilidade da variedade<a href="#det-lf-suscetibilidade" class="help-icon">?</a></td><td>RESISTENTE</td></tr>
                 </tbody>
             </table>
 
@@ -678,11 +678,11 @@
                 <div id="det-lf-area_lev"><h3>lf_area_levantada</h3><p>Área de levantamento em hectares</p></div>
                 <div id="det-lf-area_rep"><h3>lf_area_representada</h3><p>Área representada em hectares</p></div>
                 <div id="det-lf-area_mon"><h3>lf_area_monitorada</h3><p>Área monitorada em hectares</p></div>
-                <div id="det-lf-aderencia"><h3>lf_aderencia</h3><p></p>Aderência a operação em percentual</div>
+                <div id="det-lf-aderencia"><h3>lf_aderencia</h3><p></p>Aderência a operação em "COM AGENDA" ou "SEM AGENDA"</div>
                 <div id="det-lf-canas"><h3>lf_canas_avaliadas</h3><p>Número de canas avaliadas</p></div>
                 <div id="det-lf-numero"><h3>lf_numero_canas_com_lf</h3><p>Número de canas com lagartas foras</p></div>
                 <div id="det-lf-porcentagem"><h3>lf_porcentagem</h3><p>(lf_numero_canas_com_lf / lf_canas_avaliadas) × 100</p></div>
-                <div id="det-lf-suscetibilidade"><h3>lf_suscetibilidade</h3><p>1. Resistente | 2. Moderadamente resistente | 3. Intermediária | 4. Moderadamente suscetível | 5. Altamente suscetível</p></div>
+                <div id="det-lf-suscetibilidade"><h3>lf_suscetibilidade</h3><p>RESISTENTE, MODERADAMENTE RESISTENTE, INTERMEDIARIA, MODERADAMENTE SUSCETIVEL, ALTAMENTE SUSCETIVEL</p></div>
             </div>
         </div>
 
@@ -706,7 +706,7 @@
                     <tr><td>chave</td><td>text</td><td>Chave única do talhão<a href="#det-b-chave" class="help-icon">?</a></td><td>2025_7_2211_2_PL2_5_P23_17</td></tr>
                     <tr><td>safra</td><td>int</td><td>Ano safra de referência<a href="#det-b-safra" class="help-icon">?</a></td><td>2025</td></tr>
                     <tr><td>client_id</td><td>int</td><td>ID do cliente (fornecido pela SIGMA)<a href="#det-b-client_id" class="help-icon">?</a></td><td>7</td></tr>
-                    <tr><td>unidade</td><td>text</td><td>Nome da usina/unidade<a href="#det-b-unidade" class="help-icon">?</a></td><td>Usina Exemplo</td></tr>
+                    <tr><td>unidade</td><td>text</td><td>Nome da usina/unidade<a href="#det-b-unidade" class="help-icon">?</a></td><td>USINA EXEMPLO</td></tr>
                     <tr><td>fazenda</td><td>text</td><td>Número da fazenda<a href="#det-b-fazenda" class="help-icon">?</a></td><td>2211</td></tr>
                     <tr><td>setor</td><td>int</td><td>Identificador do setor<a href="#det-b-setor" class="help-icon">?</a></td><td>2</td></tr>
                     <tr><td>secao</td><td>text</td><td>Identificador da seção<a href="#det-b-secao" class="help-icon">?</a></td><td>PL2</td></tr>
@@ -719,8 +719,8 @@
                     <tr><td>b_area_levantada</td><td>float</td><td>Área efetivamente levantada (ha)<a href="#det-b-area_levantada" class="help-icon">?</a></td><td>61.95</td></tr>
                     <tr><td>b_area_representada</td><td>float</td><td>Área representada pelo ponto (ha)<a href="#det-b-area_representada" class="help-icon">?</a></td><td>0</td></tr>
                     <tr><td>b_area_monitorada</td><td>float</td><td>Área total monitorada no talhão (ha)<a href="#det-b-area_monitorada" class="help-icon">?</a></td><td>61.95</td></tr>
-                    <tr><td>b_aderencia</td><td>text</td><td>Aderência ao cronograma<a href="#det-b-aderencia" class="help-icon">?</a></td><td>Com Agenda</td></tr>
-                    <tr><td>b_suscetibilidade</td><td>text</td><td>Classe de suscetibilidade da variedade<a href="#det-b-suscetibilidade" class="help-icon">?</a></td><td>5. Altamente Suscetível</td></tr>
+                    <tr><td>b_aderencia</td><td>text</td><td>Aderência ao cronograma<a href="#det-b-aderencia" class="help-icon">?</a></td><td>COM AGENDA</td></tr>
+                    <tr><td>b_suscetibilidade</td><td>text</td><td>Classe de suscetibilidade da variedade<a href="#det-b-suscetibilidade" class="help-icon">?</a></td><td>ALTAMENTE SUSCETIVEL</td></tr>
                     <tr><td>b_hh</td><td>float</td><td>Total de horas-homem no levantamento<a href="#det-b-hh" class="help-icon">?</a></td><td>0</td></tr>
                     <tr><td>b_hh_hora_monitorada_com_agenda</td><td>float</td><td>HH realizadas dentro do cronograma<a href="#det-b-hh_com_agenda" class="help-icon">?</a></td><td>0</td></tr>
                     <tr><td>b_hh_hora_monitorada_sem_agenda</td><td>float</td><td>HH realizadas fora do cronograma<a href="#det-b-hh_sem_agenda" class="help-icon">?</a></td><td>12.6775</td></tr>
@@ -755,8 +755,8 @@
                 <div id="det-b-area_levantada"><h3>b_area_levantada</h3><p>Área efetivamente percorrida no levantamento (ha)</p></div>
                 <div id="det-b-area_representada"><h3>b_area_representada</h3><p>Área que cada ponto representa (ha)</p></div>
                 <div id="det-b-area_monitorada"><h3>b_area_monitorada</h3><p>Área total monitorada no talhão (ha)</p></div>
-                <div id="det-b-aderencia"><h3>b_aderencia</h3><p>Com Agenda = dentro do cronograma | Sem Agenda = fora</p></div>
-                <div id="det-b-suscetibilidade"><h3>b_suscetibilidade</h3><p>1. Resistente → 5. Altamente Suscetível</p></div>
+                <div id="det-b-aderencia"><h3>b_aderencia</h3><p>COM AGENDA = dentro do cronograma | SEM AGENDA = fora</p></div>
+                <div id="det-b-suscetibilidade"><h3>b_suscetibilidade</h3><p>Suscetibilidade: RESISTENTE, ALTAMENTE SUSCETIVEL</p></div>
                 <div id="det-b-hh"><h3>b_hh</h3><p>Total de horas-homem gastas no levantamento</p></div>
                 <div id="det-b-hh_com_agenda"><h3>b_hh_hora_monitorada_com_agenda</h3><p>Horas-homem realizadas dentro do cronograma previsto</p></div>
                 <div id="det-b-hh_sem_agenda"><h3>b_hh_hora_monitorada_sem_agenda</h3><p>Horas-homem realizadas fora do cronograma</p></div>
@@ -792,7 +792,7 @@
                     <tr><td>chave</td><td>text</td><td>Chave única do talhão<a href="#det-c-chave" class="help-icon">?</a></td><td>2025_7_2211_2_PL2_5_P23_17</td></tr>
                     <tr><td>safra</td><td>int</td><td>Ano safra de referência<a href="#det-c-safra" class="help-icon">?</a></td><td>2025</td></tr>
                     <tr><td>client_id</td><td>int</td><td>ID do cliente (fornecido pela SIGMA)<a href="#det-c-client_id" class="help-icon">?</a></td><td>7</td></tr>
-                    <tr><td>unidade</td><td>text</td><td>Nome da usina/unidade<a href="#det-c-unidade" class="help-icon">?</a></td><td>Usina Exemplo</td></tr>
+                    <tr><td>unidade</td><td>text</td><td>Nome da usina/unidade<a href="#det-c-unidade" class="help-icon">?</a></td><td>USINA EXEMPLO</td></tr>
                     <tr><td>fazenda</td><td>text</td><td>Número da fazenda<a href="#det-c-fazenda" class="help-icon">?</a></td><td>2211</td></tr>
                     <tr><td>setor</td><td>int</td><td>Identificador do setor<a href="#det-c-setor" class="help-icon">?</a></td><td>2</td></tr>
                     <tr><td>secao</td><td>text</td><td>Identificador da seção<a href="#det-c-secao" class="help-icon">?</a></td><td>PL2</td></tr>
@@ -859,7 +859,7 @@
                     <tr><td>chave</td><td>text</td><td>Chave única do talhão<a href="#det-solo-chave" class="help-icon">?</a></td><td>2025_7_2211_2_PL2_5_P23_17</td></tr>
                     <tr><td>safra</td><td>int</td><td>Ano safra de referência<a href="#det-solo-safra" class="help-icon">?</a></td><td>2025</td></tr>
                     <tr><td>client_id</td><td>int</td><td>ID do cliente (fornecido pela SIGMA)<a href="#det-solo-client_id" class="help-icon">?</a></td><td>7</td></tr>
-                    <tr><td>unidade</td><td>text</td><td>Nome da usina/unidade<a href="#det-solo-unidade" class="help-icon">?</a></td><td>Usina Exemplo</td></tr>
+                    <tr><td>unidade</td><td>text</td><td>Nome da usina/unidade<a href="#det-solo-unidade" class="help-icon">?</a></td><td>USINA EXEMPLO</td></tr>
                     <tr><td>fazenda</td><td>text</td><td>Número da fazenda<a href="#det-solo-fazenda" class="help-icon">?</a></td><td>2211</td></tr>
                     <tr><td>setor</td><td>int</td><td>Identificador do setor<a href="#det-solo-setor" class="help-icon">?</a></td><td>2</td></tr>
                     <tr><td>secao</td><td>text</td><td>Identificador da seção<a href="#det-solo-secao" class="help-icon">?</a></td><td>PL2</td></tr>
