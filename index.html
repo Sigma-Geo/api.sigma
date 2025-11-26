@@ -381,7 +381,7 @@
                     <tr><td>dt_ult_corte</td><td>timestamp</td><td>Data do último corte<a href="#det-dt_ult_corte" class="help-icon">?</a></td><td>15/03/2026</td></tr>
                     <tr><td>dt_corte_plan</td><td>timestamp</td><td>Data planejada do próximo corte<a href="#det-dt_corte_plan" class="help-icon">?</a></td><td>15/03/2026</td></tr>
                     <tr><td>dt_corte</td><td>timestamp</td><td>Data de corte da safra atual <a href="#det-dt_corte" class="help-icon">?</a></td><td>15/03/2026</td></tr>
-                    <tr><td>idade_corte</td><td>int</td><td>Idade no corte (meses)<a href="#det-idade_corte" class="help-icon">?</a></td><td>14</td></tr>
+                    <tr><td>idade_corte</td><td>float</td><td>Idade do corte na safra atual (meses)<a href="#det-idade_corte" class="help-icon">?</a></td><td>14</td></tr>
                     <tr><td>atr</td><td>float</td><td>ATR atual<a href="#det-atr" class="help-icon">?</a></td><td>128.3</td></tr>
                     <tr><td>atr_est</td><td>float</td><td>ATR estimado<a href="#det-atr_est" class="help-icon">?</a></td><td>125.2</td></tr>
                     <tr><td>irrigacao</td><td>text</td><td>Possui irrigação<a href="#det-irrigacao" class="help-icon">?</a></td><td>NAO, SIM</td></tr>
@@ -389,8 +389,8 @@
                     <tr><td>metodo_irrigacao</td><td>text</td><td>Método de irrigação<a href="#det-metodo_irrigacao" class="help-icon">?</a></td><td>ASPERSAO, PIVO, LOCALIZADA</td></tr>
                     <tr><td>data_irrigacao</td><td>timestamp</td><td>Data da última irrigação<a href="#det-data_irrigacao" class="help-icon">?</a></td><td>10/19/2025</td></tr>
                     <tr><td>lamina</td><td>int</td><td>Lâmina aplicada<a href="#det-lamina" class="help-icon">?</a></td><td>1, 2, 3</td></tr>
-                    <tr><td>v_m3</td><td>int</td><td>Volume aplicado em m³<a href="#det-v_m3" class="help-icon">?</a></td><td>30</td></tr>
-                    <tr><td>area_daninha</td><td>float</td><td>Área com daninha identificada (ha)<a href="#det-area_daninha" class="help-icon">?</a></td><td>4</td></tr>
+                    <tr><td>v_m3</td><td>float</td><td>Volume aplicado em m³<a href="#det-v_m3" class="help-icon">?</a></td><td>30</td></tr>
+                    <tr><td>area_daninha</td><td>float</td><td>Área com daninha voo/drone identificada (ha)<a href="#det-area_daninha" class="help-icon">?</a></td><td>4</td></tr>
                     <tr><td>dt_do_voo_daninha</td><td>timestamp</td><td>Data do voo/drone que identificou daninha<a href="#det-dt_do_voo_daninha" class="help-icon">?</a></td><td>10/19/2025</td></tr>
                     <tr><td>metros_falhas</td><td>float</td><td>Metros lineares de falhas<a href="#det-metros_falhas" class="help-icon">?</a></td><td>500.35</td></tr>
                     <tr><td>dt_do_voo_falhas</td><td>timestamp</td><td>Data do voo que identificou falhas<a href="#det-dt_do_voo_falhas" class="help-icon">?</a></td><td>10/19/2025</td></tr>
@@ -403,7 +403,6 @@
                     <tr><td>aderencia_preparo</td><td>int</td><td>% de aderência ao preparo de solo<a href="#det-aderencia_preparo" class="help-icon">?</a></td><td>31</td></tr>
                     <tr><td>aderencia_plantio</td><td>int</td><td>% de aderência ao plantio<a href="#det-aderencia_plantio" class="help-icon">?</a></td><td>90</td></tr>
                     <tr><td>aderencia_colheita</td><td>int</td><td>% de aderência à colheita<a href="#det-aderencia_colheita" class="help-icon">?</a></td><td>43</td></tr>
-                    <tr><td>aderencia_ppi</td><td>int</td><td>% de aderência ao PPI<a href="#det-aderencia_ppi" class="help-icon">?</a></td><td>88</td></tr>
                     <tr><td>aplicacao_regulador</td><td>text</td><td>Tipo de aplicação<a href="#det-aplicacao_regulador" class="help-icon">?</a></td><td>INIBIDOR, MATURADOR</td></tr>
                     <tr><td>produto_regulador</td><td>text</td><td>Produto regulador usado<a href="#det-produto_regulador" class="help-icon">?</a></td><td>ETREL, MODDUS [...]</td></tr>
                     <tr><td>dt_aplicacao_regulador</td><td>timestamp</td><td>Data da aplicação do regulador<a href="#det-dt_aplicacao_regulador" class="help-icon">?</a></td><td>10/19/2025</td></tr>
@@ -413,7 +412,7 @@
                     <tr><td>valor_k</td><td>float</td><td>Teor de potássio (K)<a href="#det-valor_k" class="help-icon">?</a></td><td>10.1</td></tr>
                     <tr><td>valor_p</td><td>float</td><td>Teor de fósforo (P)<a href="#det-valor_p" class="help-icon">?</a></td><td>30</td></tr>
                     <tr><td>valor_ctc</td><td>float</td><td>Capacidade de troca catiônica (CTC)<a href="#det-valor_ctc" class="help-icon">?</a></td><td>60.5</td></tr>
-                    <tr><td>reforma_pda</td><td>text</td><td>Reforma prevista<a href="#det-reforma_pda" class="help-icon">?</a></td><td>NAO, SIM</td></tr>
+                    <tr><td>reforma_prev</td><td>text</td><td>Reforma prevista<a href="#det-reforma_pda" class="help-icon">?</a></td><td>NAO, SIM</td></tr>
                     <tr><td>reforma_real</td><td>text</td><td>Reforma realizada<a href="#det-reforma_real" class="help-icon">?</a></td><td>NAO, SIM</td></tr>
                 </tbody>
             </table>
@@ -483,7 +482,6 @@
                 <div id="det-aderencia_preparo"><h3>aderencia_preparo</h3><p>Aderência ao preparo de solo.</p></div>
                 <div id="det-aderencia_plantio"><h3>aderencia_plantio</h3><p>Aderência às boas práticas de plantio.</p></div>
                 <div id="det-aderencia_colheita"><h3>aderencia_colheita</h3><p>Aderência às boas práticas de colheita.</p></div>
-                <div id="det-aderencia_ppi"><h3>aderencia_ppi</h3><p>Índice geral de aderência ao Plano de Produção Integrada.</p></div>
                 <div id="det-aplicacao_regulador"><h3>aplicacao_regulador</h3><p>Tipo de regulador aplicado: INIBIDOR ou MATURADOR.</p></div>
                 <div id="det-produto_regulador"><h3>produto_regulador</h3><p>Nome comercial do regulador usado.</p></div>
                 <div id="det-dt_aplicacao_regulador"><h3>dt_aplicacao_regulador</h3><p>Data da aplicação do regulador.</p></div>
@@ -493,7 +491,7 @@
                 <div id="det-valor_k"><h3>valor_k</h3><p>Teor de potássio (mg/dm³ ou cmolc/dm³).</p></div>
                 <div id="det-valor_p"><h3>valor_p</h3><p>Teor de fósforo (mg/dm³).</p></div>
                 <div id="det-valor_ctc"><h3>valor_ctc</h3><p>Capacidade de troca catiônica efetiva.</p></div>
-                <div id="det-reforma_pda"><h3>reforma_pda</h3><p>Indica se o talhão está previsto para reforma na safra.</p></div>
+                <div id="det-reforma_pda"><h3>reforma_prev</h3><p>Indica se o talhão está previsto para reforma na safra.</p></div>
                 <div id="det-reforma_real"><h3>reforma_real</h3><p>Indica se a reforma já foi executada.</p></div>
             </div>
         </div>
