@@ -161,6 +161,114 @@
         font-size: 0.92em;
         font-weight: 500;
     }
+
+    @media print {
+    body {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        background: white !important;
+    }
+
+    .sidebar {
+        display: none !important;
+    }
+
+    .content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 20px !important;
+    }
+
+    table,
+    tr,
+    td,
+    th,
+    thead,
+    tbody,
+    .section,
+    p,
+    h1, h2, h3, h4,
+    ul, li,
+    div {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    h2 + table,
+    h3 + table {
+        page-break-before: avoid !important;
+    }
+
+    @page {
+        margin: 12mm;
+        size: A4 portrait;
+    }
+}
+.pdf-logo {
+    display: none;
+}
+
+@media print {
+    .pdf-logo {
+        display: block !important;
+        position: absolute;
+        top: 8mm;
+        right: 12mm;
+        width: 120px; 
+        z-index: 9999;
+    }
+}
+@media (max-width: 768px) {
+
+    body {
+        display: block;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar img.logo {
+        width: 150px;
+        margin: 10px auto 20px auto;
+    }
+
+    .nav-link {
+        text-align: center;
+        margin: 6px 0;
+        width: 100%;
+    }
+
+    .content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 20px !important;
+    }
+
+    .section {
+        padding: 22px;
+        border-radius: 12px;
+        margin-bottom: 24px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+}
 </style>
 </head>
 <body>
@@ -179,7 +287,7 @@
 </div>
 
 <div class="content">
-    <button class="btn" onclick="downloadPDF()">Exportar PDF</button>
+    <button class="btn" onclick="window.print()">Exportar PDF</button>
 
     <div id="full-content">
 
@@ -683,6 +791,21 @@ curl -X GET "https://integracaotomo.sigmageotecnologias.com.br/api/historico-saf
                 <td><code>/api/base-talhoes?usina=<strong>{usina}</strong></code></td>
                 <td>Envia/atualiza base de talhões georreferenciados</td>
             </tr>
+
+            <tr>
+                <td><strong>Pragas de Solo</strong></td>
+                <td>GET</td>
+                <td><code>/api/pragas-solo?usina=<strong>{usina}</strong></code></td>
+                <td>Retorna todos os dados da praga de solo</td>
+            </tr>
+
+             <tr>
+                <td><strong>Pragas de Solo</strong></td>
+                <td>POST</td>
+                <td><code>/api/pragas-solo?usina=<strong>{usina}</strong></code></td>
+                <td>Envia/atualiza a base de dados das pragas de solo</td>
+            </tr>
+
         </tbody>
     </table>
 
@@ -824,75 +947,5 @@ curl -X GET "https://integracaotomo.sigmageotecnologias.com.br/api/historico-saf
     </div>
 </div>
         
-<script>
-function downloadPDF() {
-    const element = document.getElementById("full-content");
-
-    const MARGIN = 10;
-
-    html2canvas(element, {
-        scale: 2,
-        useCORS: true,
-        scrollY: -window.scrollY,
-    }).then(canvas => {
-
-        const pdf = new jspdf.jsPDF("p", "mm", "a4");
-
-        const pageWidth = pdf.internal.pageSize.getWidth();
-        const pageHeight = pdf.internal.pageSize.getHeight();
-
-        const usableWidth = pageWidth - MARGIN * 2;
-        const usableHeight = pageHeight - MARGIN * 2;
-
-        const imgWidth = canvas.width;
-        const imgHeight = canvas.height;
-
-        const ratio = imgWidth / usableWidth;
-        const sliceHeight = usableHeight * ratio;  
-
-        let position = 0;
-
-        const sliceCanvas = document.createElement("canvas");
-        const sliceContext = sliceCanvas.getContext("2d");
-
-        sliceCanvas.width = imgWidth;
-        sliceCanvas.height = sliceHeight;
-
-        while (position < imgHeight) {
-            sliceContext.clearRect(0, 0, sliceCanvas.width, sliceCanvas.height);
-
-            sliceContext.drawImage(
-                canvas,
-                0,
-                position,
-                imgWidth,
-                sliceHeight,
-                0,
-                0,
-                imgWidth,
-                sliceHeight
-            );
-
-            let imgData = sliceCanvas.toDataURL("image/png");
-
-            if (position !== 0) pdf.addPage();
-
-            pdf.addImage(
-                imgData,
-                "PNG",
-                MARGIN,
-                MARGIN,
-                usableWidth,
-                usableHeight
-            );
-
-            position += sliceHeight;
-        }
-
-        pdf.save("Tomografia_Sigma.pdf");
-    });
-}
-</script>
-
 </body>
 </html>
