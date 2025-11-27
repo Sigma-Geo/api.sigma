@@ -316,8 +316,9 @@
 
             <h3>Padronização do dados</h3>
             <ul style="line-height: 1.8; margin-bottom: 15px;">
+                <li><strong>Padrão:</strong> <strong>mantenha uma padronização em todos os dados;</strong></li>
                 <li><strong>Tipo:</strong> Respeitar os tipos dos dados, mesmo que contenha apenas números, se o campo for <strong>text</strong>, mandar nesse formato;</li>
-                <li><strong>Coluna:</strong> Todas as colunas da API devem ser <strong>identicas</strong> aos da tabela;</li>
+                <li><strong>Coluna:</strong> Todas as colunas da API devem ser <strong>idênticas</strong> aos da tabela;</li>
                 <li><strong>Valores:</strong> Todos os valores devem estar em <strong>Maiúsculo</strong></li>
             </ul>
         </div>
@@ -346,18 +347,18 @@
                     <tr><td>client_id</td><td>int</td><td>ID do cliente (Fornecido pela SIGMA) <a href="#det-client_id" class="help-icon">?</a></td><td>7</td></tr>
                     <tr><td>unidade</td><td>text</td><td>Unidade (nome da Usina) <a href="#det-unidade" class="help-icon">?</a></td><td>USINA EXEMPLO</td></tr>
                     <tr><td>fazenda</td><td>text</td><td>Número da fazenda<a href="#det-fazenda" class="help-icon">?</a></td><td>2211</td></tr>
-                    <tr><td>setor</td><td>int</td><td>Identificador do setor<a href="#det-setor" class="help-icon">?</a></td><td>2</td></tr>
+                    <tr><td>setor</td><td>text</td><td>Identificador do setor<a href="#det-setor" class="help-icon">?</a></td><td>2</td></tr>
                     <tr><td>secao</td><td>text</td><td>Identificador da seção <a href="#det-secao" class="help-icon">?</a></td><td>PL2</td></tr>
-                    <tr><td>bloco</td><td>int</td><td>Identificador do bloco<a href="#det-bloco" class="help-icon">?</a></td><td>5</td></tr>
+                    <tr><td>bloco</td><td>text</td><td>Identificador do bloco<a href="#det-bloco" class="help-icon">?</a></td><td>5</td></tr>
                     <tr><td>pivo</td><td>text</td><td>Número do pivô<a href="#det-pivo" class="help-icon">?</a></td><td>P23</td></tr>
-                    <tr><td>talhao</td><td>int</td><td>Número do talhão<a href="#det-talhao" class="help-icon">?</a></td><td>17</td></tr>
+                    <tr><td>talhao</td><td>text</td><td>Número do talhão<a href="#det-talhao" class="help-icon">?</a></td><td>17</td></tr>
                     <tr><td>objetivo</td><td>text</td><td>Objetivo do talhão<a href="#det-objetivo" class="help-icon">?</a></td><td>MOAGEM, MUDA</td></tr>
                     <tr><td>tp_prop</td><td>text</td><td>Tipo de propriedade<a href="#det-tp_prop" class="help-icon">?</a></td><td>PROPRIAS, FORNECEDORES</td></tr>
                     <tr><td>desc_faz</td><td>text</td><td>Nome da fazenda<a href="#det-desc_faz" class="help-icon">?</a></td><td>FAZENDA 1</td></tr>
                     <tr><td>desc_cana</td><td>text</td><td>Descrição da cana<a href="#det-desc_cana" class="help-icon">?</a></td><td> CANA PLANTA, SOQUEIRA, BISADA, MEIOSI</td></tr>
                     <tr><td>nmro_corte</td><td>int</td><td>Número do corte<a href="#det-nmro_corte" class="help-icon">?</a></td><td>1, 2, 3 [...]</td></tr>
                     <tr><td>estagio</td><td>text</td><td>Estágio detalhado<a href="#det-estagio" class="help-icon">?</a></td><td>15M, 18M, 2ºC, 3ºCB [...]</td></tr>
-                    <tr><td>espacamento</td><td>int</td><td>Espaçamento plantado (m)<a href="#det-espacamento" class="help-icon">?</a></td><td>1.5</td></tr>
+                    <tr><td>espacamento</td><td>float</td><td>Espaçamento plantado (m)<a href="#det-espacamento" class="help-icon">?</a></td><td>1.5</td></tr>
                     <tr><td>ambiente</td><td>text</td><td>Classe de ambiente<a href="#det-ambiente" class="help-icon">?</a></td><td>A, B, C, D, E, F, G</td></tr>
                     <tr><td>variedade</td><td>text</td><td>Variedade de cana-de-açúcar<a href="#det-variedade" class="help-icon">?</a></td><td>CTC-4</td></tr>
                     <tr><td>maturacao</td><td>text</td><td>Tipo de maturação<a href="#det-maturacao" class="help-icon">?</a></td><td>PRECOCE, MEDIA, TARDIA</td></tr>
@@ -367,7 +368,7 @@
                     <tr><td>a_muda</td><td>float</td><td>Área real de muda (ha)<a href="#det-a_muda" class="help-icon">?</a></td><td>20.9</td></tr>
                     <tr><td>area_perda</td><td>float</td><td>Área perdida/dano (ha)<a href="#det-area_perda" class="help-icon">?</a></td><td>5.2</td></tr>
                     <tr><td>a_colhida</td><td>float</td><td>Área colhida (ha)<a href="#det-a_colhida" class="help-icon">?</a></td><td>80.1</td></tr>
-                    <tr><td>tch_potencial</td><td>int</td><td>Toneladas de cana por hectare potencial<a href="#det-tch_potencial" class="help-icon">?</a></td><td>115</td></tr>
+                    <tr><td>tch_potencial</td><td>float</td><td>Toneladas de cana por hectare potencial<a href="#det-tch_potencial" class="help-icon">?</a></td><td>115</td></tr>
                     <tr><td>tch_est</td><td>float</td><td>TCH estimado<a href="#det-tch_est" class="help-icon">?</a></td><td>80.0</td></tr>
                     <tr><td>tch_rest</td><td>float</td><td>TCH reestimado<a href="#det-tch_rest" class="help-icon">?</a></td><td>20.2</tr>
                     <tr><td>tch_real</td><td>float</td><td>TCH real<a href="#det-tch_real" class="help-icon">?</a></td><td>96.3</td></tr>
@@ -375,7 +376,7 @@
                     <tr><td>tc_est</td><td>float</td><td>Toneladas de cana estimadas<a href="#det-tc_est" class="help-icon">?</a></td><td>12422.7</td></tr>
                     <tr><td>tc_rest</td><td>float</td><td>Toneladas de cana reestimado (?)<a href="#det-tc_rest" class="help-icon">?</a></td><td>20.3</td></tr>
                     <tr><td>tc_real</td><td>float</td><td>Toneladas de cana reais<a href="#det-tc_real" class="help-icon">?</a></td><td>1059.3</td></tr>
-                    <tr><td>tah</td><td>float</td><td>Valor de tonelada de açúcar por hectare<a href="#det-tah" class="help-icon">?</a></td><td>13.5</td></tr>
+                    <tr><td>tah</td><td>float</td><td>Toneladas de açúcar por hectare<a href="#det-tah" class="help-icon">?</a></td><td>13.5</td></tr>
                     <tr><td>tph</td><td>float</td><td>Toneladas de POL por hectare<a href="#det-tph" class="help-icon">?</a></td><td>10.5</td></tr>
                     <tr><td>dt_plantio</td><td>timestamp</td><td>Data de plantio<a href="#det-dt_plantio" class="help-icon">?</a></td><td>15/03/2025</td></tr>
                     <tr><td>dt_ult_corte</td><td>timestamp</td><td>Data do último corte<a href="#det-dt_ult_corte" class="help-icon">?</a></td><td>15/03/2026</td></tr>
@@ -398,11 +399,11 @@
                     <tr><td>perdas_col</td><td>float</td><td>% de perdas na colheita<a href="#det-perdas_col" class="help-icon">?</a></td><td>4.0</td></tr>
                     <tr><td>pisoteio</td><td>text</td><td>Classificação do pisoteio<a href="#det-pisoteio" class="help-icon">?</a></td><td>NAO, SIM</td></tr>
                     <tr><td>declividade</td><td>float</td><td>Declividade média do talhão<a href="#det-declividade" class="help-icon">?</a></td><td>10.2</td></tr>
-                    <tr><td>aderencia_tratos</td><td>int</td><td>% de aderência aos tratos culturais<a href="#det-aderencia_tratos" class="help-icon">?</a></td><td>25</td></tr>
-                    <tr><td>aderencia_maturacao</td><td>int</td><td>% de aderência à maturação<a href="#det-aderencia_maturacao" class="help-icon">?</a></td><td>34</td></tr>
-                    <tr><td>aderencia_preparo</td><td>int</td><td>% de aderência ao preparo de solo<a href="#det-aderencia_preparo" class="help-icon">?</a></td><td>31</td></tr>
-                    <tr><td>aderencia_plantio</td><td>int</td><td>% de aderência ao plantio<a href="#det-aderencia_plantio" class="help-icon">?</a></td><td>90</td></tr>
-                    <tr><td>aderencia_colheita</td><td>int</td><td>% de aderência à colheita<a href="#det-aderencia_colheita" class="help-icon">?</a></td><td>43</td></tr>
+                    <tr><td>aderencia_tratos</td><td>float</td><td>% de aderência aos tratos culturais<a href="#det-aderencia_tratos" class="help-icon">?</a></td><td>25</td></tr>
+                    <tr><td>aderencia_maturacao</td><td>float</td><td>% de aderência à maturação<a href="#det-aderencia_maturacao" class="help-icon">?</a></td><td>34</td></tr>
+                    <tr><td>aderencia_preparo</td><td>float</td><td>% de aderência ao preparo de solo<a href="#det-aderencia_preparo" class="help-icon">?</a></td><td>31</td></tr>
+                    <tr><td>aderencia_plantio</td><td>float</td><td>% de aderência ao plantio<a href="#det-aderencia_plantio" class="help-icon">?</a></td><td>90</td></tr>
+                    <tr><td>aderencia_colheita</td><td>float</td><td>% de aderência à colheita<a href="#det-aderencia_colheita" class="help-icon">?</a></td><td>43</td></tr>
                     <tr><td>aplicacao_regulador</td><td>text</td><td>Tipo de aplicação<a href="#det-aplicacao_regulador" class="help-icon">?</a></td><td>INIBIDOR, MATURADOR</td></tr>
                     <tr><td>produto_regulador</td><td>text</td><td>Produto regulador usado<a href="#det-produto_regulador" class="help-icon">?</a></td><td>ETREL, MODDUS [...]</td></tr>
                     <tr><td>dt_aplicacao_regulador</td><td>timestamp</td><td>Data da aplicação do regulador<a href="#det-dt_aplicacao_regulador" class="help-icon">?</a></td><td>10/19/2025</td></tr>
@@ -426,53 +427,53 @@
                 <div id="det-unidade"><h3>unidade</h3><p>Nome da Usina <strong>SIGMA</strong> para referenciar ao nome fantasia da Usina/Unidade.</p></div>
                 <div id="det-fazenda"><h3>fazenda</h3><p>Código para referenciar a fazenda.</p></div>
                 <div id="det-setor"><h3>setor</h3><p>Código para referenciar o setor, se não houver, use: <strong>0</strong>.</p></div>
-                <div id="det-secao"><h3>secao</h3><p>Código para referenciar a seção como: SECAO 2, SECAO A. se não houver, use: <strong>"0"</strong>.</p></div>
+                <div id="det-secao"><h3>secao</h3><p>Código para referenciar a seção como: SECAO 2, SECAO A. se não houver, use: <strong>0</strong>.</p></div>
                 <div id="det-bloco"><h3>bloco</h3><p>Código para referenciar o bloco, se não houver, use: <strong>0</strong>.</p></div>
-                <div id="det-pivo"><h3>pivo</h3><p>Código para referenciar o pivo, se não houver, use: <strong>"0"</strong>.</p></div>
+                <div id="det-pivo"><h3>pivo</h3><p>Código para referenciar o pivo, se não houver, use: <strong>0</strong>.</p></div>
                 <div id="det-talhao"><h3>talhao</h3><p>Número para referenciar o talhão.</strong></p></div>
                 <div id="det-objetivo"><h3>objetivo</h3><p>Finalidade do talhão: MOAGEM, MUDA, POUSIO, PLANTIO, MOAGEM/MUDA, REFORMA, PASSAGEM.</p></div>
                 <div id="det-tp_prop"><h3>tp_prop</h3><p>Identificação se é uma área: PROPRIAS, PARCERIAS, ACIONISTAS, SPOT, ARRENDAMENTO, FORNECEDORES.</p></div>
                 <div id="det-desc_faz"><h3>desc_faz</h3><p>Nome completo da fazenda.</p></div>
                 <div id="det-desc_cana"><h3>desc_cana</h3><p>Estágio atual: CANA PLANTA, MEIOSI, SOQUEIRA ou BISADA.</p></div>
                 <div id="det-nmro_corte"><h3>nmro_corte</h3><p>Contagem de cortes: 1 = cana-planta, 2 = 1º soca, etc.</p></div>
-                <div id="det-estagio"><h3>estagio</h3><p>Estágio detalhado (ex: 18M = 18 meses, 1ºC = 1º corte, 2ºCB = 2º Corte bisada).</p></div>
+                <div id="det-estagio"><h3>estagio</h3><p>Estágio detalhado <strong>SEM ESPAÇOS</strong> contendo número e letra, sendo o número o estagio ex: 18 (18 meses), 1 ( 1 corte), 2 (2 corte ) [...] e a letra podendo ser M (Mês), C (Corte), CB (Corte Bisado), VER (Verão). Ex: 18M, 1ºC, 2ºCB, 2VER [...], acima de 10ºC usar <strong>10ºC+</strong></p>.</div>
                 <div id="det-espacamento"><h3>espacamento</h3><p>Espaçamento planejado no plantio (metros).</p></div>
                 <div id="det-ambiente"><h3>ambiente</h3><p>Classificação de ambiente produtivo: A, B, C, D, E, F, G.</p></div>
-                <div id="det-variedade"><h3>variedade</h3><p>Código da variedade plantada, <strong>mantenha uma padronização</strong>.</p></div>
+                <div id="det-variedade"><h3>variedade</h3><p>Código da variedade plantada.</p></div>
                 <div id="det-maturacao"><h3>maturacao</h3><p>Classificação de maturação: PRECOCE, MEDIA, TARDIA.</p></div>
                 <div id="det-area_bd"><h3>area_bd</h3><p>Área total bruta cadastrada no sistema (ha).</p></div>
-                <div id="det-a_est_moagem"><h3>a_est_moagem</h3><p>Área planejada para moagem na safra atual.</p></div>
-                <div id="det-a_est_muda"><h3>a_est_muda</h3><p>Área planejada para produção de mudas.</p></div>
-                <div id="det-a_muda"><h3>a_muda</h3><p>Área efetivamente utilizada para muda.</p></div>
-                <div id="det-area_perda"><h3>area_perda</h3><p>Área perdida por erosão, inundação, etc.</p></div>
-                <div id="det-a_colhida"><h3>a_colhida</h3><p>Área já colhida na safra atual.</p></div>
-                <div id="det-tch_potencial"><h3>tch_potencial</h3><p>Produtividade potencial estimada para o ambiente/variedade.</p></div>
-                <div id="det-tch_est"><h3>tch_est</h3><p>Toneladas de cana por hectare estimadas.</p></div>
-                <div id="det-tch_rest"><h3>tch_rest</h3><p>TCH reestimado (toneladas/ha).</p></div>
-                <div id="det-tch_real"><h3>tch_real</h3><p>TCH efetivamente colhido.</p></div>
-                <div id="det-tc_potencial"><h3>tc_potencial</h3><p>Total de toneladas de cana potencial.</p></div>
-                <div id="det-tc_est"><h3>tc_est</h3><p>Total de toneladas estimadas para o talhão.</p></div>
-                <div id="det-tc_rest"><h3>tc_rest</h3><p>Toneladas de cana reestimado no campo (estimativa).</p></div>
-                <div id="det-tc_real"><h3>tc_real</h3><p>Total de toneladas efetivamente colhidas.</p></div>
+                <div id="det-a_est_moagem"><h3>a_est_moagem</h3><p>Área planejada para moagem na safra atual em hectares.</p></div>
+                <div id="det-a_est_muda"><h3>a_est_muda</h3><p>Área planejada para produção de mudas em hectares.</p></div>
+                <div id="det-a_muda"><h3>a_muda</h3><p>Área efetivamente utilizada para muda em hectares.</p></div>
+                <div id="det-area_perda"><h3>area_perda</h3><p>Área perdida por erosão, inundação, e outras em hectares.</p></div>
+                <div id="det-a_colhida"><h3>a_colhida</h3><p>Área já colhida na safra atual em hectares.</p></div>
+                <div id="det-tch_potencial"><h3>tch_potencial</h3><p>Produtividade potencial estimada para o ambiente/variedade na safra atual.</p></div>
+                <div id="det-tch_est"><h3>tch_est</h3><p>Toneladas de cana por hectare estimadas na safra atual.</p></div>
+                <div id="det-tch_rest"><h3>tch_rest</h3><p>TCH reestimado (toneladas/ha) na safra atual.</p></div>
+                <div id="det-tch_real"><h3>tch_real</h3><p>TCH efetivamente colhido na safra atual.</p></div>
+                <div id="det-tc_potencial"><h3>tc_potencial</h3><p>Total de toneladas de cana potencial na safra atual.</p></div>
+                <div id="det-tc_est"><h3>tc_est</h3><p>Total de toneladas estimadas para o talhão na safra atual.</p></div>
+                <div id="det-tc_rest"><h3>tc_rest</h3><p>Toneladas de cana reestimado no campo (estimativa) na safra atual.</p></div>
+                <div id="det-tc_real"><h3>tc_real</h3><p>Total de toneladas efetivamente colhidas na safra atual.</p></div>
                 <div id="det-tah"><h3>tah</h3><p>Valor de tonelada de açúcar por hectare.</p></div>
                 <div id="det-tph"><h3>tph</h3><p>Toneladas de POL por hectare.</p></div>
                 <div id="det-dt_plantio"><h3>dt_plantio</h3><p>Data real do plantio (formato DD/MM/AAAA).</p></div>
-                <div id="det-dt_ult_corte"><h3>dt_ult_corte</h3><p>Data do último corte realizado.</p></div>
-                <div id="det-dt_corte_plan"><h3>dt_corte_plan</h3><p>Data prevista para o próximo corte.</p></div>
-                <div id="det-dt_corte"><h3>dt_corte</h3><p>Data de corte da safra atual.</p></div>
+                <div id="det-dt_ult_corte"><h3>dt_ult_corte</h3><p>Data do último corte realizado (formato DD/MM/AAAA).</p></div>
+                <div id="det-dt_corte_plan"><h3>dt_corte_plan</h3><p>Data prevista para o próximo corte (formato DD/MM/AAAA).</p></div>
+                <div id="det-dt_corte"><h3>dt_corte</h3><p>Data de corte da safra atual (formato DD/MM/AAAA).</p></div>
                 <div id="det-idade_corte"><h3>idade_corte</h3><p>Idade do canavial no momento do corte (meses).</p></div>
                 <div id="det-atr"><h3>atr</h3><p>Açúcares Totais Recuperáveis atual (kg/ton).</p></div>
                 <div id="det-atr_est"><h3>atr_est</h3><p>ATR estimado para o corte.</p></div>
                 <div id="det-irrigacao"><h3>irrigacao</h3><p>Indica se o talhão é irrigado: NAO ou SIM.</p></div>
                 <div id="det-tp_irrigacao"><h3>tp_irrigacao</h3><p>Tipo de fertilizante irrigado: AGUA LIMPA, AGUA RESIDUARIA, VINHACA, VINHACA ENRIQUECIDA.</p></div>
                 <div id="det-metodo_irrigacao"><h3>metodo_irrigacao</h3><p>Método de aplicação: ASPERSAO, PIVO, GOTEJAMENTO, LOCALIZADA.</p></div>
-                <div id="det-data_irrigacao"><h3>data_irrigacao</h3><p>Data da última aplicação de fertirrigação.</p></div>
+                <div id="det-data_irrigacao"><h3>data_irrigacao</h3><p>Data da última aplicação de fertirrigação (formato DD/MM/AAAA).</p></div>
                 <div id="det-lamina"><h3>lamina</h3><p>Qual lâmina foi aplicada: 1, 2 ou 3.</p></div>
                 <div id="det-v_m3"><h3>v_m3</h3><p>Volume aplicado em metros cúbicos por hectare.</p></div>
                 <div id="det-area_daninha"><h3>area_daninha</h3><p>Área identificada com infestação de daninhas.</p></div>
-                <div id="det-dt_do_voo_daninha"><h3>dt_do_voo_daninha</h3><p>Data do voo que detectou daninhas.</p></div>
+                <div id="det-dt_do_voo_daninha"><h3>dt_do_voo_daninha</h3><p>Data do voo que detectou daninhas (formato DD/MM/AAAA).</p></div>
                 <div id="det-metros_falhas"><h3>metros_falhas</h3><p>Total de metros lineares com falhas de plantio.</p></div>
-                <div id="det-dt_do_voo_falhas"><h3>dt_do_voo_falhas</h3><p>Data do voo que mediu falhas.</p></div>
+                <div id="det-dt_do_voo_falhas"><h3>dt_do_voo_falhas</h3><p>Data do voo que mediu falhas (formato DD/MM/AAAA).</p></div>
                 <div id="det-metros_linear_cana"><h3>metros_linear_cana</h3><p>Total de metros lineares de cana plantada.</p></div>
                 <div id="det-perdas_col"><h3>perdas_col</h3><p>Percentual de perdas na colheita mecânica.</p></div>
                 <div id="det-pisoteio"><h3>pisoteio</h3><p>Classificação se houve pisoteio por máquinas: NAO ou SIM.</p></div>
@@ -484,7 +485,7 @@
                 <div id="det-aderencia_colheita"><h3>aderencia_colheita</h3><p>Aderência às boas práticas de colheita.</p></div>
                 <div id="det-aplicacao_regulador"><h3>aplicacao_regulador</h3><p>Tipo de regulador aplicado: INIBIDOR ou MATURADOR.</p></div>
                 <div id="det-produto_regulador"><h3>produto_regulador</h3><p>Nome comercial do regulador usado.</p></div>
-                <div id="det-dt_aplicacao_regulador"><h3>dt_aplicacao_regulador</h3><p>Data da aplicação do regulador.</p></div>
+                <div id="det-dt_aplicacao_regulador"><h3>dt_aplicacao_regulador</h3><p>Data da aplicação do regulador (formato DD/MM/AAAA).</p></div>
                 <div id="det-classe_de_solo"><h3>classe_de_solo</h3><p>Classificação pedológica principal como: LATOSSOLO, ARGISSOLO, NEOSSOLO [...].</p></div>
                 <div id="det-textura"><h3>textura</h3><p>Textura predominante do solo: ARENOSA, MEDIA ou ARGILOSA.</p></div>
                 <div id="det-per_argila"><h3>per_argila</h3><p>Percentual de argila no solo.</p></div>
@@ -497,7 +498,7 @@
         </div>
     
         <div id="chuvas" class="section">
-            <h2>Dados das Estações Meteorológicas</h2>
+            <h2>Chuvas</h2>
             <p style="line-height: 1.8; margin-bottom: 15px;">
             Dados meteorológicos coletados nas estações localizadas nas fazendas da unidade. 
             A consulta deve ser disponibilizada em formato *.json e conter os atributos elencados a seguir.
@@ -517,10 +518,10 @@
                     <tr><td>fazenda</td><td>text</td><td>Nome da fazenda em que se localiza a estação de coleta<a href="#det-fazenda" class="help-icon">?</a></td><td>Fazenda XYZ</td></tr>
                     <tr><td>y_lat</td><td>float</td><td>Coordenada geográfica. Valor da latitude em graus decimais<a href="#det-y_lat" class="help-icon">?</a></td><td>-23.456789</td></tr>
                     <tr><td>x_long</td><td>float</td><td>Coordenada geográfica. Valor da longitude em graus decimais<a href="#det-x_long" class="help-icon">?</a></td><td>-46.789012</td></tr>
-                    <tr><td>data</td><td>timestamp</td><td>Data de coleta, no formato ISO (YYYY-MM-DD)<a href="#det-data" class="help-icon">?</a></td><td>2023-05-15</td></tr>
+                    <tr><td>data</td><td>timestamp</td><td>Data de coleta<a href="#det-data" class="help-icon">?</a></td><td>15/05/2025</td></tr>
                     <tr><td>ano</td><td>int</td><td>Ano da data de coleta<a href="#det-data" class="help-icon">?</a></td><td>2023</td></tr>
                     <tr><td>mes</td><td>int</td><td>Mês da data de coleta (1-12)<a href="#det-data" class="help-icon">?</a></td><td>5</td></tr>
-                    <tr><td>semana</td><td>int</td><td>Semana do ano (ISO week number, 1-53)<a href="#det-data" class="help-icon">?</a></td><td>20</td></tr>
+                    <tr><td>semana</td><td>int</td><td>Semana do ano<a href="#det-data" class="help-icon">?</a></td><td>20</td></tr>
                     <tr><td>dia</td><td>int</td><td>Dia do mês da coleta<a href="#det-data" class="help-icon">?</a></td><td>15</td></tr>
                     <tr><td>precipitacao</td><td>float</td><td>Valor da precipitação registrada, em milímetros (mm)<a href="#det-precipitacao" class="help-icon">?</a></td><td>12.5</td></tr>
                     <tr><td>temp_media</td><td>float</td><td>Temperatura média registrada no dia (°C)<a href="#det-temp" class="help-icon">?</a></td><td>22.5</td></tr>
@@ -539,7 +540,7 @@
                 <div id="det-fazenda"><h3>fazenda</h3><p>Nome completo da fazenda onde a estação está instalada.</p></div>
                 <div id="det-y_lat"><h3>y_lat</h3><p>Latitude da estação em graus decimais (datum WGS84). Valores negativos indicam hemisfério sul.</p></div>
                 <div id="det-x_long"><h3>x_long</h3><p>Longitude da estação em graus decimais (datum WGS84). Valores negativos indicam hemisfério oeste.</p></div>
-                <div id="det-data"><h3>data / ano / mes / semana / dia</h3><p>Data da medição no formato ISO 8601 (YYYY-MM-DD) e seus componentes extraídos para facilitar filtros e agrupamentos.</p></div>
+                <div id="det-data"><h3>data / ano / mes / semana / dia</h3><p>Data da medição (formato DD/MM/AAAA) e seus componentes extraídos para facilitar filtros e agrupamentos.</p></div>
                 <div id="det-precipitacao"><h3>precipitacao</h3><p>Pluviometria total acumulada no dia (mm), com separador decimal ponto.</p></div>
                 <div id="det-temp"><h3>temp_media / temp_min / temp_max</h3><p>Temperaturas registradas em graus Celsius (°C), com uma casa decimal.</p></div>
                 <div id="det-hum"><h3>umi_media / umi_min / umi_max</h3><p>Umidade registradas em percentual, com uma casa decimal.</p></div>
@@ -547,7 +548,7 @@
         </div>
 
         <div id="talhoes" class="section">
-            <h2>Dados de Talhões – Polígonos Georreferenciados</h2>
+            <h2>Talhões (geometrias) – Polígonos Georreferenciados</h2>
             <p style="line-height: 1.8; margin-bottom: 15px;">
                 Dados relacionados à base de talhões da usina, polígonos georreferenciados. 
                 A consulta deve ser disponibilizada em formato *.json e conter os atributos elencados a seguir.
@@ -568,11 +569,11 @@
                     <tr><td>fazenda</td><td>text</td><td>Código da fazenda<a href="#det-fazenda" class="help-icon">?</a></td><td>2211</td></tr>
                     <tr><td>setor</td><td>text</td><td>Código do setor (numérico ou texto)<a href="#det-setor" class="help-icon">?</a></td><td>2</td></tr>
                     <tr><td>secao</td><td>text</td><td>Identificação da seção (opcional)<a href="#det-secao" class="help-icon">?</a></td><td>PL2</td></tr>
-                    <tr><td>bloco</td><td>int</td><td>Identificação do bloco dentro do setor<a href="#det-bloco" class="help-icon">?</a></td><td>5</td></tr>
+                    <tr><td>bloco</td><td>text</td><td>Identificação do bloco dentro do setor<a href="#det-bloco" class="help-icon">?</a></td><td>5</td></tr>
                     <tr><td>pivo</td><td>text</td><td>Identificação do pivô ou sistema de irrigação (opcional)<a href="#det-pivo" class="help-icon">?</a></td><td>P23</td></tr>
-                    <tr><td>talhao</td><td>int</td><td>Código do talhão (número identificador)<a href="#det-talhao" class="help-icon">?</a></td><td>17</td></tr>
+                    <tr><td>talhao</td><td>text</td><td>Código do talhão (número identificador)<a href="#det-talhao" class="help-icon">?</a></td><td>17</td></tr>
                     <tr><td>area_gis</td><td>float</td><td>Área do talhão em hectares (calculada via GIS)<a href="#det-area_gis" class="help-icon">?</a></td><td>5.5488754</td></tr>
-                    <tr><td>tp_prop</td><td>text</td><td>Tipo de contrato/propriedade do talhão<a href="#det-tp_prop" class="help-icon">?</a></td><td>PROPRIAS, FORNECEDORES</td></tr>
+                    <tr><td>tp_prop</td><td>text</td><td>Tipo de contrato/propriedade do talhão<a href="#det-tp_prop" class="help-icon">?</a></td><td>PROPRIAS</td></tr>
                     <tr>
                         <td>geometria</td>
                         <td>json (GeoJSON)</td>
@@ -596,7 +597,7 @@
                 <div id="det-pivo"><h3>pivo</h3><p>Código do pivô central de irrigação.</p></div>
                 <div id="det-talhao"><h3>talhao</h3><p>Número do talhão monitorado.</p></div>
                 <div id="det-area_gis"><h3>area_gis</h3><p>Área real do talhão em hectares, calculada a partir da geometria (GIS). Valor com até 6 casas decimais.</p></div>
-                <div id="det-tp_prop"><h3>tp_prop</h3><p>Tipo de contrato ou propriedade do talhão. Valores permitidos: <strong>PROPRIAS, FORNECEDORES</strong>.</p></div>
+                <div id="det-tp_prop"><h3>tp_prop</h3><p>Identificação do tipo de contrato. Valores permitidos: PROPRIAS, PARCERIAS, ACIONISTAS, SPOT, ARRENDAMENTO, FORNECEDORES.</p></div>
 
                 <div id="det-geometria"><h3>geometria</h3>
                     <p>Geometria do talhão no formato <strong>GeoJSON</strong> (Polygon ou MultiPolygon).</p>
@@ -627,7 +628,7 @@
         </div>
 
         <div id="lf" class="section">
-            <h2>Lagarta Fora (LF) – Monitoramento de Broca-da-Cana</h2>
+            <h2>Lagarta Fora (Broca) / LF – Monitoramento de Broca-da-Cana</h2>
             <p style="line-height: 1.8; margin-bottom: 15px;">
                 Dados de monitoramento da lagarta fora (Diatraea saccharalis) em talhões de cana-de-açúcar. 
                 A consulta deve ser disponibilizada em formato *.json e conter os atributos elencados a seguir.
@@ -647,13 +648,13 @@
                     <tr><td>safra</td><td>int</td><td>Ano safra de referência<a href="#det-lf-safra" class="help-icon">?</a></td><td>2025</td></tr>
                     <tr><td>client_id</td><td>int</td><td>ID do cliente (fornecido pela SIGMA)<a href="#det-lf-client_id" class="help-icon">?</a></td><td>7</td></tr>
                     <tr><td>unidade</td><td>text</td><td>Nome da usina/unidade<a href="#det-lf-unidade" class="help-icon">?</a></td><td>USINA EXEMPLO</td></tr>
-                    <tr><td>fazenda</td><td>text</td><td>Número da fazenda<a href="#det-lf-fazenda" class="help-icon">?</a></td><td>2211</td></tr>
-                    <tr><td>setor</td><td>int</td><td>Identificador do setor<a href="#det-lf-setor" class="help-icon">?</a></td><td>2</td></tr>
+                    <tr><td>fazenda</td><td>text</td><td>Identificador da fazenda<a href="#det-lf-fazenda" class="help-icon">?</a></td><td>2211</td></tr>
+                    <tr><td>setor</td><td>text</td><td>Identificador do setor<a href="#det-lf-setor" class="help-icon">?</a></td><td>2</td></tr>
                     <tr><td>secao</td><td>text</td><td>Identificador da seção<a href="#det-lf-secao" class="help-icon">?</a></td><td>PL2</td></tr>
-                    <tr><td>bloco</td><td>int</td><td>Identificador do bloco<a href="#det-lf-bloco" class="help-icon">?</a></td><td>5</td></tr>
-                    <tr><td>pivo</td><td>text</td><td>Número do pivô<a href="#det-lf-pivo" class="help-icon">?</a></td><td>P23</td></tr>
-                    <tr><td>talhao</td><td>int</td><td>Número do talhão<a href="#det-lf-talhao" class="help-icon">?</a></td><td>17</td></tr>
-                    <tr><td>restricao_voou</td><td>int</td><td>Restrição de voo (0 = sem restrição, 1 = com restrição)<a href="#det-lf-restricao" class="help-icon">?</a></td><td>0</td></tr>
+                    <tr><td>bloco</td><td>text</td><td>Identificador do bloco<a href="#det-lf-bloco" class="help-icon">?</a></td><td>5</td></tr>
+                    <tr><td>pivo</td><td>text</td><td>Identificador do pivô<a href="#det-lf-pivo" class="help-icon">?</a></td><td>P23</td></tr>
+                    <tr><td>talhao</td><td>text</td><td>Identificador do talhão<a href="#det-lf-talhao" class="help-icon">?</a></td><td>17</td></tr>
+                    <tr><td>restricao_voo</td><td>int</td><td>Restrição de voo (0 = sem restrição, 1 = com restrição)<a href="#det-lf-restricao" class="help-icon">?</a></td><td>0</td></tr>
                     <tr><td>lf_data_levantamento</td><td>timestamp</td><td>Data do levantamento (DD/MM/AAAA)<a href="#det-lf-data" class="help-icon">?</a></td><td>06/04/2025</td></tr>
                     <tr><td>lf_area_levantada</td><td>float</td><td>Área efetivamente levantada (ha)<a href="#det-lf-area_lev" class="help-icon">?</a></td><td>22.19</td></tr>
                     <tr><td>lf_area_representada</td><td>float</td><td>Área representada pelo levantamento (ha)<a href="#det-lf-area_rep" class="help-icon">?</a></td><td>40.48</td></tr>
@@ -673,8 +674,8 @@
                 <div id="det-lf-client_id"><h3>client_id</h3><p>Código interno do cliente na SIGMA</p></div>
                 <div id="det-lf-unidade"><h3>unidade</h3><p>Nome da usina ou unidade produtiva</p></div>
                 <div id="det-lf-fazenda"><h3>fazenda / setor / secao / bloco / pivo / talhao</h3><p>Hierarquia geográfica completa do talhão como: SECAO 2, SECAO A</p></div>
-                <div id="det-lf-restricao"><h3>restricao_voou</h3><p>0 = sem restrição de aplicação aérea | 1 = com restrição (ex: perto de cidades, rios, etc)</p></div>
-                <div id="det-lf-data"><h3>lf_data_levantamento</h3><p>Data real do monitoramento no campo</p></div>
+                <div id="det-lf-restricao"><h3>restricao_voo</h3><p>0 = sem restrição de aplicação aérea | 1 = com restrição (ex: perto de cidades, rios, etc)</p></div>
+                <div id="det-lf-data"><h3>lf_data_levantamento</h3><p>Data real do monitoramento no campo (formato DD/MM/AAAA)</p></div>
                 <div id="det-lf-area_lev"><h3>lf_area_levantada</h3><p>Área de levantamento em hectares</p></div>
                 <div id="det-lf-area_rep"><h3>lf_area_representada</h3><p>Área representada em hectares</p></div>
                 <div id="det-lf-area_mon"><h3>lf_area_monitorada</h3><p>Área monitorada em hectares</p></div>
@@ -687,7 +688,7 @@
         </div>
 
         <div id="broca" class="section">
-            <h2>Broca da Cana (Diatraea saccharalis)</h2>
+            <h2>Broca (Diatraea saccharalis)</h2>
             <p style="line-height: 1.8; margin-bottom: 15px;">
                 Dados completos de monitoramento da broca-da-cana: armadilhas feromonais, esforço de campo (HH), 
                 parasitação natural e percentual de dano nos internódios.
@@ -708,12 +709,12 @@
                     <tr><td>client_id</td><td>int</td><td>ID do cliente (fornecido pela SIGMA)<a href="#det-b-client_id" class="help-icon">?</a></td><td>7</td></tr>
                     <tr><td>unidade</td><td>text</td><td>Nome da usina/unidade<a href="#det-b-unidade" class="help-icon">?</a></td><td>USINA EXEMPLO</td></tr>
                     <tr><td>fazenda</td><td>text</td><td>Número da fazenda<a href="#det-b-fazenda" class="help-icon">?</a></td><td>2211</td></tr>
-                    <tr><td>setor</td><td>int</td><td>Identificador do setor<a href="#det-b-setor" class="help-icon">?</a></td><td>2</td></tr>
+                    <tr><td>setor</td><td>text</td><td>Identificador do setor<a href="#det-b-setor" class="help-icon">?</a></td><td>2</td></tr>
                     <tr><td>secao</td><td>text</td><td>Identificador da seção<a href="#det-b-secao" class="help-icon">?</a></td><td>PL2</td></tr>
-                    <tr><td>bloco</td><td>int</td><td>Identificador do bloco<a href="#det-b-bloco" class="help-icon">?</a></td><td>5</td></tr>
+                    <tr><td>bloco</td><td>text</td><td>Identificador do bloco<a href="#det-b-bloco" class="help-icon">?</a></td><td>5</td></tr>
                     <tr><td>pivo</td><td>text</td><td>Número do pivô<a href="#det-b-pivo" class="help-icon">?</a></td><td>P23</td></tr>
-                    <tr><td>talhao</td><td>int</td><td>Número do talhão<a href="#det-b-talhao" class="help-icon">?</a></td><td>17</td></tr>
-                    <tr><td>restricao_voou</td><td>int</td><td>Restrição de voo (0 = sem, 1 = com)<a href="#det-b-restricao" class="help-icon">?</a></td><td>0</td></tr>
+                    <tr><td>talhao</td><td>text</td><td>Número do talhão<a href="#det-b-talhao" class="help-icon">?</a></td><td>17</td></tr>
+                    <tr><td>restricao_voo</td><td>int</td><td>Restrição de voo (0 = sem, 1 = com)<a href="#det-b-restricao" class="help-icon">?</a></td><td>0</td></tr>
                     <tr><td>b_data_levantamento</td><td>timestamp</td><td>Data do levantamento<a href="#det-b-data_levantamento" class="help-icon">?</a></td><td>12/03/2022</td></tr>
                     <tr><td>b_machos</td><td>int</td><td>Número de machos capturados na armadilha feromonal<a href="#det-b-machos" class="help-icon">?</a></td><td>190</td></tr>
                     <tr><td>b_area_levantada</td><td>float</td><td>Área efetivamente levantada (ha)<a href="#det-b-area_levantada" class="help-icon">?</a></td><td>61.95</td></tr>
@@ -749,7 +750,7 @@
                 <div id="det-b-bloco"><h3>bloco</h3><p>Identificador do bloco</p></div>
                 <div id="det-b-pivo"><h3>pivo</h3><p>Código do pivô central</p></div>
                 <div id="det-b-talhao"><h3>talhao</h3><p>Número do talhão</p></div>
-                <div id="det-b-restricao"><h3>restricao_voou</h3><p>0 = sem restrição de aplicação aérea | 1 = com restrição</p></div>
+                <div id="det-b-restricao"><h3>restricao_voo</h3><p>0 = sem restrição de aplicação aérea | 1 = com restrição</p></div>
                 <div id="det-b-data_levantamento"><h3>b_data_levantamento</h3><p>Data do monitoramento no campo (DD/MM/AAAA)</p></div>
                 <div id="det-b-machos"><h3>b_machos</h3><p>Total de adultos machos capturados na armadilha feromonal na semana</p></div>
                 <div id="det-b-area_levantada"><h3>b_area_levantada</h3><p>Área efetivamente percorrida no levantamento (ha)</p></div>
@@ -773,7 +774,7 @@
         </div>
 
         <div id="cig" class="section">
-            <h2>Cigarrinha da Cana (Mahanarva fimbriolata)</h2>
+            <h2>Cigarrinha (Mahanarva fimbriolata)</h2>
             <p style="line-height: 1.8; margin-bottom: 15px;">
                 Dados completos de monitoramento da cigarrinha-da-cana: área levantada, aderência ao cronograma, 
                 suscetibilidade da variedade, adultos capturados, densidade de ninfas e presença de espuma.
@@ -794,13 +795,13 @@
                     <tr><td>client_id</td><td>int</td><td>ID do cliente (fornecido pela SIGMA)<a href="#det-c-client_id" class="help-icon">?</a></td><td>7</td></tr>
                     <tr><td>unidade</td><td>text</td><td>Nome da usina/unidade<a href="#det-c-unidade" class="help-icon">?</a></td><td>USINA EXEMPLO</td></tr>
                     <tr><td>fazenda</td><td>text</td><td>Número da fazenda<a href="#det-c-fazenda" class="help-icon">?</a></td><td>2211</td></tr>
-                    <tr><td>setor</td><td>int</td><td>Identificador do setor<a href="#det-c-setor" class="help-icon">?</a></td><td>2</td></tr>
+                    <tr><td>setor</td><td>text</td><td>Identificador do setor<a href="#det-c-setor" class="help-icon">?</a></td><td>2</td></tr>
                     <tr><td>secao</td><td>text</td><td>Identificador da seção<a href="#det-c-secao" class="help-icon">?</a></td><td>PL2</td></tr>
-                    <tr><td>bloco</td><td>int</td><td>Identificador do bloco<a href="#det-c-bloco" class="help-icon">?</a></td><td>5</td></tr>
+                    <tr><td>bloco</td><td>text</td><td>Identificador do bloco<a href="#det-c-bloco" class="help-icon">?</a></td><td>5</td></tr>
                     <tr><td>pivo</td><td>text</td><td>Número do pivô<a href="#det-c-pivo" class="help-icon">?</a></td><td>P23</td></tr>
-                    <tr><td>talhao</td><td>int</td><td>Número do talhão<a href="#det-c-talhao" class="help-icon">?</a></td><td>17</td></tr>
-                    <tr><td>restricao_voou</td><td>int</td><td>Restrição de voo (0 = sem restrição, 1 = com restrição)<a href="#det-c-restricao" class="help-icon">?</a></td><td>0</td></tr>
-                    <tr><td>c_data_levantamento</td><td>timestamp</td><td>Data do levantamento no campo (DD/MM/AAAA)<a href="#det-c-data_levantamento" class="help-icon">?</a></td><td>15/09/2025</td></tr>
+                    <tr><td>talhao</td><td>text</td><td>Número do talhão<a href="#det-c-talhao" class="help-icon">?</a></td><td>17</td></tr>
+                    <tr><td>restricao_voo</td><td>int</td><td>Restrição de voo (0 = sem restrição, 1 = com restrição)<a href="#det-c-restricao" class="help-icon">?</a></td><td>0</td></tr>
+                    <tr><td>c_data_levantamento</td><td>timestamp</td><td>Data do levantamento no campo<a href="#det-c-data_levantamento" class="help-icon">?</a></td><td>15/09/2025</td></tr>
                     <tr><td>c_area_levantada</td><td>float</td><td>Área efetivamente percorrida no levantamento (ha)<a href="#det-c-area_levantada" class="help-icon">?</a></td><td>6.80</td></tr>
                     <tr><td>c_area_representada</td><td>float</td><td>Área representada por cada ponto amostrado (ha)<a href="#det-c-area_representada" class="help-icon">?</a></td><td>3.52</td></tr>
                     <tr><td>c_area_monitorada</td><td>float</td><td>Área total monitorada no talhão (ha)<a href="#det-c-area_monitorada" class="help-icon">?</a></td><td>26.36</td></tr>
@@ -825,7 +826,7 @@
                 <div id="det-c-bloco"><h3>bloco</h3><p>Identificador do bloco como: BLOCO A, BLOCO B</p></div>
                 <div id="det-c-pivo"><h3>pivo</h3><p>Código do pivô central como: L2, L3, C1</p></div>
                 <div id="det-c-talhao"><h3>talhao</h3><p>Número do talhão</p></div>
-                <div id="det-c-restricao"><h3>restricao_voou</h3><p>0 = sem restrição de aplicação aérea | 1 = com restrição (ex: perto de rios, cidades, etc)</p></div>
+                <div id="det-c-restricao"><h3>restricao_voo</h3><p>0 = sem restrição de aplicação aérea | 1 = com restrição (ex: perto de rios, cidades, etc)</p></div>
                 <div id="det-c-data_levantamento"><h3>c_data_levantamento</h3><p>Data real do monitoramento no campo (formato DD/MM/AAAA)</p></div>
                 <div id="det-c-area_levantada"><h3>c_area_levantada</h3><p>Área efetivamente percorrida durante o levantamento (em hectares)</p></div>
                 <div id="det-c-area_representada"><h3>c_area_representada</h3><p>Área que cada ponto de amostragem representa (em hectares)</p></div>
@@ -861,14 +862,14 @@
                     <tr><td>client_id</td><td>int</td><td>ID do cliente (fornecido pela SIGMA)<a href="#det-solo-client_id" class="help-icon">?</a></td><td>7</td></tr>
                     <tr><td>unidade</td><td>text</td><td>Nome da usina/unidade<a href="#det-solo-unidade" class="help-icon">?</a></td><td>USINA EXEMPLO</td></tr>
                     <tr><td>fazenda</td><td>text</td><td>Número da fazenda<a href="#det-solo-fazenda" class="help-icon">?</a></td><td>2211</td></tr>
-                    <tr><td>setor</td><td>int</td><td>Identificador do setor<a href="#det-solo-setor" class="help-icon">?</a></td><td>2</td></tr>
+                    <tr><td>setor</td><td>text</td><td>Identificador do setor<a href="#det-solo-setor" class="help-icon">?</a></td><td>2</td></tr>
                     <tr><td>secao</td><td>text</td><td>Identificador da seção<a href="#det-solo-secao" class="help-icon">?</a></td><td>PL2</td></tr>
-                    <tr><td>bloco</td><td>int</td><td>Identificador do bloco<a href="#det-solo-bloco" class="help-icon">?</a></td><td>5</td></tr>
+                    <tr><td>bloco</td><td>text</td><td>Identificador do bloco<a href="#det-solo-bloco" class="help-icon">?</a></td><td>5</td></tr>
                     <tr><td>pivo</td><td>text</td><td>Número do pivô<a href="#det-solo-pivo" class="help-icon">?</a></td><td>P23</td></tr>
-                    <tr><td>talhao</td><td>int</td><td>Número do talhão<a href="#det-solo-talhao" class="help-icon">?</a></td><td>17</td></tr>
+                    <tr><td>talhao</td><td>text</td><td>Número do talhão<a href="#det-solo-talhao" class="help-icon">?</a></td><td>17</td></tr>
                     <tr><td>data</td><td>timestamp</td><td>Data do levantamento no campo<a href="#det-solo-data" class="help-icon">?</a></td><td>15/09/2025</td></tr>
                     <tr><td>n_ponto</td><td>int</td><td>Número sequencial do ponto de amostragem<a href="#det-solo-nponto" class="help-icon">?</a></td><td>1</td></tr>
-                    <tr><td>cup_gen</td><td>int</td><td>Presença de cupins (0 = ausente, 1 = presente)<a href="#det-solo-cup_gen" class="help-icon">?</a></td><td>COPTOTERMES</td></tr>
+                    <tr><td>cup_gen</td><td>text</td><td>Gênero do cupim<a href="#det-solo-cup_gen" class="help-icon">?</a></td><td>COPTOTERMES</td></tr>
                     <tr><td>cup_danos_touceiras</td><td>text</td><td>Danos por cupins nas touceiras (S = sim, N = não)<a href="#det-solo-cup_danos" class="help-icon">?</a></td><td>S</td></tr>
                     <tr><td>cup_nota_populacional</td><td>int</td><td>Nota populacional de cupins (0 a 5)<a href="#det-solo-cup_nota" class="help-icon">?</a></td><td>3</td></tr>
                     <tr><td>sph_rizomas_totais</td><td>int</td><td>Total de rizomas coletados<a href="#det-solo-sph_rizomas_totais" class="help-icon">?</a></td><td>700</td></tr>
