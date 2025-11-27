@@ -314,7 +314,7 @@
                 Ao longo deste documento, apresentaremos uma visão detalhada dos <strong>pré-requisitos técnicos</strong> necessários para iniciar a integração, abordando diferentes bases de dados, além de fornecer orientações sobre como manter a <strong>segurança e confiabilidade</strong> dos dados em todas as etapas do processo.
             </p>
 
-            <h3>Padronização do dados</h3>
+            <h3>Padronização dos dados</h3>
             <ul style="line-height: 1.8; margin-bottom: 15px;">
                 <li><strong>Padrão:</strong> Mantenha uma padronização em todos os dados;</li>
                 <li><strong>Tipo:</strong> Respeitar os tipos dos dados, mesmo que contenha apenas números, se o campo for <strong>text</strong>, mandar nesse formato;</li>
@@ -374,7 +374,7 @@
                     <tr><td>tch_real</td><td>float</td><td>TCH real<a href="#det-tch_real" class="help-icon">?</a></td><td>96.3</td></tr>
                     <tr><td>tc_potencial</td><td>float</td><td>Toneladas de cana potencial<a href="#det-tc_potencial" class="help-icon">?</a></td><td>20050.7</td></tr>
                     <tr><td>tc_est</td><td>float</td><td>Toneladas de cana estimadas<a href="#det-tc_est" class="help-icon">?</a></td><td>12422.7</td></tr>
-                    <tr><td>tc_rest</td><td>float</td><td>Toneladas de cana reestimado (?)<a href="#det-tc_rest" class="help-icon">?</a></td><td>20.3</td></tr>
+                    <tr><td>tc_rest</td><td>float</td><td>Toneladas de cana reestimadas (?)<a href="#det-tc_rest" class="help-icon">?</a></td><td>20.3</td></tr>
                     <tr><td>tc_real</td><td>float</td><td>Toneladas de cana reais<a href="#det-tc_real" class="help-icon">?</a></td><td>1059.3</td></tr>
                     <tr><td>tah</td><td>float</td><td>Toneladas de açúcar por hectare<a href="#det-tah" class="help-icon">?</a></td><td>13.5</td></tr>
                     <tr><td>tph</td><td>float</td><td>Toneladas de POL por hectare<a href="#det-tph" class="help-icon">?</a></td><td>10.5</td></tr>
@@ -388,13 +388,13 @@
                     <tr><td>irrigacao</td><td>text</td><td>Possui irrigação<a href="#det-irrigacao" class="help-icon">?</a></td><td>NAO, SIM</td></tr>
                     <tr><td>tp_irrigacao</td><td>text</td><td>Tipo de irrigação<a href="#det-tp_irrigacao" class="help-icon">?</a></td><td>VINHACA, AGUA RESIDUARIA [...]</td></tr>
                     <tr><td>metodo_irrigacao</td><td>text</td><td>Método de irrigação<a href="#det-metodo_irrigacao" class="help-icon">?</a></td><td>ASPERSAO, PIVO, LOCALIZADA</td></tr>
-                    <tr><td>data_irrigacao</td><td>timestamp</td><td>Data da última irrigação<a href="#det-data_irrigacao" class="help-icon">?</a></td><td>10/19/2025</td></tr>
+                    <tr><td>data_irrigacao</td><td>timestamp</td><td>Data da última irrigação<a href="#det-data_irrigacao" class="help-icon">?</a></td><td>19/10/2025</td></tr>
                     <tr><td>lamina</td><td>int</td><td>Lâmina aplicada<a href="#det-lamina" class="help-icon">?</a></td><td>1, 2, 3</td></tr>
                     <tr><td>v_m3</td><td>float</td><td>Volume aplicado em m³<a href="#det-v_m3" class="help-icon">?</a></td><td>30</td></tr>
                     <tr><td>area_daninha</td><td>float</td><td>Área com daninha voo/drone identificada (ha)<a href="#det-area_daninha" class="help-icon">?</a></td><td>4</td></tr>
-                    <tr><td>dt_do_voo_daninha</td><td>timestamp</td><td>Data do voo/drone que identificou daninha<a href="#det-dt_do_voo_daninha" class="help-icon">?</a></td><td>10/19/2025</td></tr>
+                    <tr><td>dt_do_voo_daninha</td><td>timestamp</td><td>Data do voo/drone que identificou daninha<a href="#det-dt_do_voo_daninha" class="help-icon">?</a></td><td>19/10/2025</td></tr>
                     <tr><td>metros_falhas</td><td>float</td><td>Metros lineares de falhas<a href="#det-metros_falhas" class="help-icon">?</a></td><td>500.35</td></tr>
-                    <tr><td>dt_do_voo_falhas</td><td>timestamp</td><td>Data do voo que identificou falhas<a href="#det-dt_do_voo_falhas" class="help-icon">?</a></td><td>10/19/2025</td></tr>
+                    <tr><td>dt_do_voo_falhas</td><td>timestamp</td><td>Data do voo que identificou falhas<a href="#det-dt_do_voo_falhas" class="help-icon">?</a></td><td>19/10/2025</td></tr>
                     <tr><td>metros_linear_cana</td><td>float</td><td>Metros lineares de cana plantada<a href="#det-metros_linear_cana" class="help-icon">?</a></td><td>71126.22</td></tr>
                     <tr><td>perdas_col</td><td>float</td><td>% de perdas na colheita<a href="#det-perdas_col" class="help-icon">?</a></td><td>4.0</td></tr>
                     <tr><td>pisoteio</td><td>text</td><td>Classificação do pisoteio<a href="#det-pisoteio" class="help-icon">?</a></td><td>NAO, SIM</td></tr>
@@ -406,7 +406,7 @@
                     <tr><td>aderencia_colheita</td><td>float</td><td>% de aderência à colheita<a href="#det-aderencia_colheita" class="help-icon">?</a></td><td>43</td></tr>
                     <tr><td>aplicacao_regulador</td><td>text</td><td>Tipo de aplicação<a href="#det-aplicacao_regulador" class="help-icon">?</a></td><td>INIBIDOR, MATURADOR</td></tr>
                     <tr><td>produto_regulador</td><td>text</td><td>Produto regulador usado<a href="#det-produto_regulador" class="help-icon">?</a></td><td>ETREL, MODDUS [...]</td></tr>
-                    <tr><td>dt_aplicacao_regulador</td><td>timestamp</td><td>Data da aplicação do regulador<a href="#det-dt_aplicacao_regulador" class="help-icon">?</a></td><td>10/19/2025</td></tr>
+                    <tr><td>dt_aplicacao_regulador</td><td>timestamp</td><td>Data da aplicação do regulador<a href="#det-dt_aplicacao_regulador" class="help-icon">?</a></td><td>19/10/2025</td></tr>
                     <tr><td>classe_de_solo</td><td>text</td><td>Classe de solo<a href="#det-classe_de_solo" class="help-icon">?</a></td><td>LATOSSOLO, ARGISSOLO [...]</td></tr>
                     <tr><td>textura</td><td>text</td><td>Textura do solo<a href="#det-textura" class="help-icon">?</a></td><td>ARENOSA, MEDIA, ARGILOSA</td></tr>
                     <tr><td>per_argila</td><td>float</td><td>% de argila<a href="#det-per_argila" class="help-icon">?</a></td><td>20.3</td></tr>
@@ -903,7 +903,7 @@
                 <div id="det-solo-talhao"><h3>talhao</h3><p>Número do talhão monitorado.</p></div>
                 <div id="det-solo-data"><h3>data</h3><p>Data em que foi realizado o levantamento subterrâneo (DD/MM/AAAA).</p></div>
                 <div id="det-solo-nponto"><h3>n_ponto</h3><p>Número sequencial do ponto de amostragem dentro do talhão.</p></div>
-                <div id="det-solo-cup_gen"><h3>cup_gen</h3><p>Indica o genero do cupim.</p></div>
+                <div id="det-solo-cup_gen"><h3>cup_gen</h3><p>Indica o gênero do cupim.</p></div>
                 <div id="det-solo-cup_danos"><h3>cup_danos_touceiras</h3><p>Indica se há danos visíveis por cupins nas touceiras (S = sim, N = não).</p></div>
                 <div id="det-solo-cup_nota"><h3>cup_nota_populacional</h3><p>Nota de 0 a 5 que representa a intensidade populacional de cupins (0 = ausente, 5 = altíssima).</p></div>
                 <div id="det-solo-sph_rizomas_totais"><h3>sph_rizomas_totais</h3><p>Quantidade total de rizomas coletados na amostra.</p></div>
