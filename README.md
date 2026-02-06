@@ -94,4 +94,3 @@ Para dúvidas sobre integração ou API:
 Este projeto é privado e destinado exclusivamente à documentação técnica da Sigma.
 
 Uso restrito a clientes e parceiros autorizados.
-```
