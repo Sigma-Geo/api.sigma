@@ -62,7 +62,6 @@ POST /api/cigarrinha?usina={usina}
 GET  /api/pragas-solo?usina={usina}
 POST /api/pragas-solo?usina={usina}
 ```
-
 ## 🖨 Exportar PDF
 
 Clique no botão:
@@ -80,7 +79,6 @@ Ctrl + P
 O layout já está preparado para impressão em A4.
 
 ---
-
 ## 📞 Contato técnico
 
 Para dúvidas sobre integração ou API:
